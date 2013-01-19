@@ -1,67 +1,54 @@
 package darkhax.moreswordsmod;
 
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.DungeonHooks;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import darkhax.moreswordsmod.common.MSMConfiguration;
 import darkhax.moreswordsmod.common.MSMDataProxy;
 import darkhax.moreswordsmod.common.MSMItems;
-import darkhax.moreswordsmod.common.MSMPathing;
-import darkhax.moreswordsmod.common.MSMRecipeRegistry;
 import darkhax.moreswordsmod.common.MSMNaming;
+import darkhax.moreswordsmod.common.MSMCraftingRegistry;
+import darkhax.moreswordsmod.common.MSMPathing;
+import darkhax.moreswordsmod.common.TabMoreSwordsMod;
 
-@Mod(modid = "darkhax_msm", name = "MoreSwordsMod", version = "2.2.4")
+@Mod(modid = "darkhax_msm", name = "MoreSwordMod", version = "2.4.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
-public class MoreSwordsMod
-{
-	public static MSMItems items;
+public class MoreSwordsMod{
+	public static CreativeTabs tabMoreSwordsMod = new TabMoreSwordsMod(CreativeTabs.getNextID(), "TabMoreSwordsMod");
+	
 	public static MSMConfiguration config;
 	public static MSMDataProxy data;
 	public static MSMPathing pathing;
-	public static MSMRecipeRegistry recipeRegistry;
+	public static MSMItems items;
 	public static MSMNaming naming;
-	public static CreativeTabs tabMoreSwordsMod = new TabMoreSwordsMod(CreativeTabs.getNextID(), "TabMoreSwordsMod");
-
+	public static MSMCraftingRegistry oldrecipies;
+	
+	@SidedProxy(serverSide="darkhax.moreswordsmod.server.MSMCommonProxy", clientSide="darkhax.moreswordsmod.client.MSMClientProxy")
+	public static darkhax.moreswordsmod.server.MSMCommonProxy proxy;
+	
+	@Instance("darkhax_msm")
+    public static MoreSwordsMod instance;
+	
 	@Init
 	public void Init(FMLInitializationEvent event){
-		recipeRegistry.addRecipes();
-		naming.addItemNames();
-		//dungeon hooks  itemtack/rarity/min/max 1=gold apple 100= bread
-		DungeonHooks.addDungeonLoot(new ItemStack(MSMItems.awakenedBlazeSword), 7, 1, 1);
-		DungeonHooks.addDungeonLoot(new ItemStack(MSMItems.awakenedBloodSword), 7, 1, 1);
-		DungeonHooks.addDungeonLoot(new ItemStack(MSMItems.awakenedBoneSword), 7, 1, 1);
-		//	DungeonHooks.addDungeonLoot(new ItemStack(AwakenedDragonSword), 7, 1, 1);
-		DungeonHooks.addDungeonLoot(new ItemStack(MSMItems.awakenedEyeEndSword), 7, 1, 1);
-		//	DungeonHooks.addDungeonLoot(new ItemStack(AwakenedGlassSword), 7, 1, 1);
-		//	DungeonHooks.addDungeonLoot(new ItemStack(AwakenedInfinitySword), 7, 1, 1);
-		//	DungeonHooks.addDungeonLoot(new ItemStack(AwakenedLapisSword), 7, 1, 1);
-		//	DungeonHooks.addDungeonLoot(new ItemStack(AwakenedMoltenSword), 7, 1, 1);
-		DungeonHooks.addDungeonLoot(new ItemStack(MSMItems.awakenedAqueousSword), 7, 1, 1);
-		//	DungeonHooks.addDungeonLoot(new ItemStack(AwakenedMasterSword), 7, 1, 1);
-		DungeonHooks.addDungeonLoot(new ItemStack(MSMItems.awakenedAethersGuard), 7, 1, 1);
-		DungeonHooks.addDungeonLoot(new ItemStack(MSMItems.awakenedWitherBane), 7, 1, 1);
-		//	DungeonHooks.addDungeonLoot(new ItemStack(AwakenedAdminArk), 7, 1, 1);
+		new MSMNaming(true);
+		new MSMCraftingRegistry(true);
 
-	}
-	
-	private void prePreInitialization(){
-		items = new MSMItems();
-		data = new MSMDataProxy();
-		pathing = new MSMPathing();
-		recipeRegistry = new MSMRecipeRegistry();
-		naming = new MSMNaming();
+
+		proxy.addTextureForPreload("swords.png", "TEXTURE_SWORDS");
+		proxy.registerRenderThings();
 	}
 
-	@cpw.mods.fml.common.Mod.PreInit
+	@PreInit
 	public void PreInit(FMLPreInitializationEvent event){
-		System.out.println("MoreSwordsMod By Darkhax Loading!");
-		prePreInitialization();
-		config = new MSMConfiguration();
-		config.createConfig(event);
+		System.out.println("MoreSwordsMod By Darkhax Detected!");
+		config = new MSMConfiguration(event);
+		data = new MSMDataProxy();
 	}
 }

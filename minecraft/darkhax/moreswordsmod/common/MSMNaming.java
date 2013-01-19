@@ -2,40 +2,57 @@ package darkhax.moreswordsmod.common;
 
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+
 public class MSMNaming{
-	private MSMItems items;
+	public MSMNaming(boolean flag){
+		if(flag){
+			try{
+				addItemNames();
+			} catch(Exception exception){
+				throw new RuntimeException("Error Detected When Adding MoreSwordsMod Item Names");
+			}
+		} else{
+			addItemNames();
+		}
+	}
 	
-	public void addItemNames(){
-		// Sword Names
-		//LanguageRegistry.addName(MSMItems.blazeSword, "\u00a76Blaze Sword");	  
-		LanguageRegistry.addName(MSMItems.bloodSword, "\u00a74Blood Sword");	  
-		LanguageRegistry.addName(MSMItems.boneSword, "\u00a7fBone Sword");	  
-		LanguageRegistry.addName(MSMItems.dragonSword, "\u00a75Draconic Sword");	  
-		LanguageRegistry.addName(MSMItems.eyeEndSword, "\u00a7aEyeEnd Sword");
-		LanguageRegistry.addName(MSMItems.glassSword, "\u00a78Glass Sword");	  
-		LanguageRegistry.addName(items.infinitySword, "\u00a77Infinity Sword");	
-		LanguageRegistry.addName(items.lapisSword, "\u00a71Lapis Sword");	  
-		LanguageRegistry.addName(items.moltenSword, "\u00a7cMolten Sword");
-		LanguageRegistry.addName(items.aqueousSword, "\u00a7bAqueous Sword");	  
-		LanguageRegistry.addName(items.masterSword, "\u00a73Master Sword");	
-		LanguageRegistry.addName(items.aethersGuard, "Aether's Guard");
-		LanguageRegistry.addName(items.witherBane, "Wither Bane");
-		LanguageRegistry.addName(items.adminArk, "\u00a74A\u00a76d\u00a7Em\u00a72i\u00a71n \u00a75A\u00a7dr\u00a7ak");
+	private void addItemNames(){
+		//language registers 
+		LanguageRegistry.addName(MSMItems.BlazeSword, "\u00a76Blaze Sword");	  
+		LanguageRegistry.addName(MSMItems.BloodSword, "\u00a74Blood Sword");	  
+		LanguageRegistry.addName(MSMItems.BoneSword, "\u00a7fBone Sword");	  
+		LanguageRegistry.addName(MSMItems.DragonSword, "\u00a75Draconic Sword");	  
+		LanguageRegistry.addName(MSMItems.EyeEndSword, "\u00a7aEyeEnd Sword");
+		LanguageRegistry.addName(MSMItems.GlassSword, "\u00a78Glass Sword");	  
+		LanguageRegistry.addName(MSMItems.InfinitySword, "\u00a77Infinity Sword");	
+		LanguageRegistry.addName(MSMItems.LapisSword, "\u00a71Lapis Sword");	  
+		LanguageRegistry.addName(MSMItems.MoltenSword, "\u00a7cMolten Sword");
+		LanguageRegistry.addName(MSMItems.AqueousSword, "\u00a7bAqueous Sword");	  
+		LanguageRegistry.addName(MSMItems.MasterSword, "\u00a73Master Sword");	
+		LanguageRegistry.addName(MSMItems.AethersGuard, "Aether's Guard");
+		LanguageRegistry.addName(MSMItems.WitherBane, "Wither Bane");
+		LanguageRegistry.addName(MSMItems.AdminArk, "\u00a74A\u00a76d\u00a7Em\u00a72i\u00a71n \u00a75A\u00a7dr\u00a7ak");
+		LanguageRegistry.addName(MSMItems.CandyCaneSword, "\u00a74C\u00a7fa\u00a74n\u00a7fd\u00a74y \u00a7fC\u00a74a\u00a7fn\u00a74e \u00a7fS\u00a74w\u00a7fo\u00a74r\u00a7fd");
+		LanguageRegistry.addName(MSMItems.PumpkinPieSword, "Pumpkin Pie Sword");
+		LanguageRegistry.addName(MSMItems.GingerManSword, "Gingerbread Man");
 		
-		// Awakened Sword Names
-		LanguageRegistry.addName(items.awakenedBlazeSword, "\u00a76Blaze Sword");	  
-		LanguageRegistry.addName(items.awakenedBloodSword, "\u00a74Blood Sword");	  
-		LanguageRegistry.addName(items.awakenedBoneSword, "\u00a7fBone Sword");	  
-		LanguageRegistry.addName(items.awakenedDragonSword, "\u00a75Draconic Sword");	  
-		LanguageRegistry.addName(items.awakenedEyeEndSword, "\u00a7aEyeEnd Sword");
-		LanguageRegistry.addName(items.awakenedGlassSword, "\u00a78Glass Sword");	  
-		LanguageRegistry.addName(items.awakenedInfinitySword, "\u00a77Infinity Sword");	
-		LanguageRegistry.addName(items.awakenedLapisSword, "\u00a71Lapis Sword");	  
-		LanguageRegistry.addName(items.awakenedMoltenSword, "\u00a7cMolten Sword");
-		LanguageRegistry.addName(items.awakenedAqueousSword, "\u00a7bAqueous Sword");	  
-		LanguageRegistry.addName(items.awakenedMasterSword, "\u00a73Master Sword");	
-		LanguageRegistry.addName(items.awakenedAethersGuard, "Aether's Guard");
-		LanguageRegistry.addName(items.awakenedWitherBane, "Wither Bane");
-		LanguageRegistry.addName(items.awakenedAdminArk, "\u00a74A\u00a76d\u00a7Em\u00a72i\u00a71n \u00a75A\u00a7dr\u00a7ak");
+		LanguageRegistry.addName(MSMItems.AwakenedBlazeSword, "\u00a76Blaze Sword");	  
+		LanguageRegistry.addName(MSMItems.AwakenedBloodSword, "\u00a74Blood Sword");	  
+		LanguageRegistry.addName(MSMItems.AwakenedBoneSword, "\u00a7fBone Sword");	  
+		LanguageRegistry.addName(MSMItems.AwakenedDragonSword, "\u00a75Draconic Sword");	  
+		LanguageRegistry.addName(MSMItems.AwakenedEyeEndSword, "\u00a7aEyeEnd Sword");
+		LanguageRegistry.addName(MSMItems.AwakenedGlassSword, "\u00a78Glass Sword");	  
+		LanguageRegistry.addName(MSMItems.AwakenedInfinitySword, "\u00a77Infinity Sword");	
+		LanguageRegistry.addName(MSMItems.AwakenedLapisSword, "\u00a71Lapis Sword");	  
+		LanguageRegistry.addName(MSMItems.AwakenedMoltenSword, "\u00a7cMolten Sword");
+		LanguageRegistry.addName(MSMItems.AwakenedAqueousSword, "\u00a7bAqueous Sword");	  
+		LanguageRegistry.addName(MSMItems.AwakenedMasterSword, "\u00a73Master Sword");	
+		LanguageRegistry.addName(MSMItems.AwakenedAethersGuard, "Aether's Guard");
+		LanguageRegistry.addName(MSMItems.AwakenedWitherBane, "Wither Bane");
+		LanguageRegistry.addName(MSMItems.AwakenedAdminArk, "\u00a74A\u00a76d\u00a7Em\u00a72i\u00a71n \u00a75A\u00a7dr\u00a7ak");
+		LanguageRegistry.addName(MSMItems.AwakenedCandyCaneSword, "\u00a74C\u00a7fa\u00a74n\u00a7fd\u00a74y \u00a7fC\u00a74a\u00a7fn\u00a74e \u00a7fS\u00a74w\u00a7fo\u00a74r\u00a7fd");
+		LanguageRegistry.addName(MSMItems.AwakenedPumpkinPieSword, "Pumpkin Pie Sword");
+		LanguageRegistry.addName(MSMItems.AwakenedGingerManSword, "Gingerbread Man");
+	
 	}
 }

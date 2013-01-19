@@ -1,16 +1,15 @@
 package darkhax.moreswordsmod.Entity;
 
-
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.Side;
-import cpw.mods.fml.common.asm.SideOnly;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntityWarpPearl extends EntityEnderPearl
+public class EntityWarpPearl extends EntityThrowable
 {
     public EntityWarpPearl(World par1World)
     {
@@ -35,23 +34,25 @@ public class EntityWarpPearl extends EntityEnderPearl
     {
         if (par1MovingObjectPosition.entityHit != null)
         {
-            par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.func_85052_h()), 0);
+            par1MovingObjectPosition.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), 0);
         }
 
         for (int var2 = 0; var2 < 32; ++var2)
         {
+            this.worldObj.spawnParticle("portal", this.posX, this.posY + this.rand.nextDouble() * 2.0D, this.posZ, this.rand.nextGaussian(), 0.0D, this.rand.nextGaussian());
         }
 
         if (!this.worldObj.isRemote)
         {
-            if (this.func_85052_h() != null && this.func_85052_h() instanceof EntityPlayerMP)
+            if (this.getThrower() != null && this.getThrower() instanceof EntityPlayerMP)
             {
-                EntityPlayerMP var3 = (EntityPlayerMP)this.func_85052_h();
+                EntityPlayerMP var3 = (EntityPlayerMP)this.getThrower();
 
                 if (!var3.playerNetServerHandler.connectionClosed && var3.worldObj == this.worldObj)
                 {
-                    this.func_85052_h().setPositionAndUpdate(this.posX, this.posY, this.posZ);
-                    this.func_85052_h().fallDistance = 0.0F;
+                    this.getThrower().setPositionAndUpdate(this.posX, this.posY, this.posZ);
+                    this.getThrower().fallDistance = 0.0F;
+                    this.getThrower().attackEntityFrom(DamageSource.fall, 0);
                 }
             }
 

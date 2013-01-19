@@ -1,8 +1,8 @@
 package darkhax.moreswordsmod.Events;
 
-import darkhax.moreswordsmod.MoreSwordsMod;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.event.ForgeSubscribe;
+import darkhax.moreswordsmod.MoreSwordsMod;
 
 public class msm_EventSounds
 {
