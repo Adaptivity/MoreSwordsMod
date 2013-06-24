@@ -12,6 +12,7 @@ import cpw.mods.fml.common.network.NetworkMod;
 
 import darkhax.moreswordsmod.core.proxy.CommonProxy;
 import darkhax.moreswordsmod.core.util.Config;
+import darkhax.moreswordsmod.core.util.Language;
 import darkhax.moreswordsmod.core.util.Reference;
 import darkhax.moreswordsmod.items.ItemRegistry;
 
@@ -26,10 +27,13 @@ public class MoreSwords{
 	@Mod.Instance(Reference.id)
     public static MoreSwords instance;
 	
+	public static Language lang = Language.getInstance();
+	
 	@Mod.PreInit
 	public void PreInit(FMLPreInitializationEvent event){	
 		
 		getModMeta(event.getModMetadata());
+		ItemRegistry.load();
 		Config.createConfig(event);
 	}
 	
