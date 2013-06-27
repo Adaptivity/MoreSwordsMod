@@ -1,6 +1,6 @@
-package darkhax.moreswordsmod.core.util;
+package darkhax.moreswords.core.util;
 
-import static darkhax.moreswordsmod.core.util.Reference.logger;
+import static darkhax.moreswords.core.util.Reference.logger;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,7 +17,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Language {
 
-	public static final String LANG_DIR = "/darkhax/moreswordsmod/lang/";
+	public static final String LANG_DIR = "/darkhax/moreswords/lang/";
 
 	public boolean errorShown = false;
 

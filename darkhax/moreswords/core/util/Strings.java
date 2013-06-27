@@ -1,4 +1,4 @@
-package darkhax.moreswordsmod.core.util;
+package darkhax.moreswords.core.util;
 
 public class Strings {
 	

@@ -1,4 +1,4 @@
-package darkhax.moreswordsmod.core.proxy;
+package darkhax.moreswords.core.proxy;
 
 
 public class ClientProxy extends CommonProxy{

@@ -1,11 +1,11 @@
-package darkhax.moreswordsmod.items;
+package darkhax.moreswords.items;
 
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import darkhax.moreswordsmod.MoreSwords;
-import darkhax.moreswordsmod.core.util.Config;
-import darkhax.moreswordsmod.core.util.Strings;
+import darkhax.moreswords.MoreSwords;
+import darkhax.moreswords.core.util.Config;
+import darkhax.moreswords.core.util.Strings;
 
 public class ItemRegistry {
 

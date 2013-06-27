@@ -1,4 +1,4 @@
-package darkhax.moreswordsmod.core.util;
+package darkhax.moreswords.core.util;
 
 import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;

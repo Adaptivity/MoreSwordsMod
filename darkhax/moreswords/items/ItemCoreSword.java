@@ -1,8 +1,9 @@
-package darkhax.moreswordsmod.items;
+package darkhax.moreswords.items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import darkhax.moreswordsmod.core.util.Strings;
+import darkhax.moreswords.core.util.Strings;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -68,6 +69,11 @@ public class ItemCoreSword extends ItemSword
 	public String getUnlocalizedName() {
 
 		return "sword." + this.type + ".name";
+	}
+	
+	public void registerIcons(IconRegister iconRegister)
+	{
+	         this.itemIcon = iconRegister.registerIcon("MoreSwords:"+ this.type);
 	}
   
 }
