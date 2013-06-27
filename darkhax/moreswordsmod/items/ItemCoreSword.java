@@ -2,6 +2,7 @@ package darkhax.moreswordsmod.items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import darkhax.moreswordsmod.core.util.Strings;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,6 +15,7 @@ public class ItemCoreSword extends ItemSword
   public int damage;
   public int enchantability;
   public ItemStack repair;
+  public final String type;
 
   /**
    * 
@@ -23,9 +25,10 @@ public class ItemCoreSword extends ItemSword
    * @param enchantability: Enchantability level
    * @param durability: Tool usage
    * @param repair: Block or Item used to repair the tool. 
+   * @param swordType: Small identifier to help seperate the swords.
    * 
    */
-  public ItemCoreSword(int id, EnumToolMaterial material, int damage, int enchantability, int durability, ItemStack repair)
+  public ItemCoreSword(int id, EnumToolMaterial material, int damage, int enchantability, int durability, ItemStack repair, String swordType)
   {
     super(id, EnumToolMaterial.IRON);
     setCreativeTab(CreativeTabs.tabCombat);
@@ -33,6 +36,8 @@ public class ItemCoreSword extends ItemSword
     setEnchantability(enchantability);
     setRepairable(repair);
 	setMaxDamage(durability);
+	this.type = swordType;
+	
   }
   
   public void setDamage(int i) {
@@ -58,5 +63,11 @@ public class ItemCoreSword extends ItemSword
   public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
     return this.repair.itemID == par2ItemStack.itemID ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
   }
+  
+	@Override
+	public String getUnlocalizedName() {
+
+		return "sword." + this.type + ".name";
+	}
   
 }

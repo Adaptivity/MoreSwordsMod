@@ -33,8 +33,8 @@ public class MoreSwords{
 	public void PreInit(FMLPreInitializationEvent event){	
 		
 		getModMeta(event.getModMetadata());
-		ItemRegistry.load();
 		Config.createConfig(event);
+		ItemRegistry.load();
 	}
 	
 	@Mod.Init

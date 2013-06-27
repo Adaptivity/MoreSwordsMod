@@ -8,7 +8,7 @@ public class Config{
 	// Categories
 	public static String settings = "Mod Settings";
 	public static String values = "Item Values";
-	public static String Uses = "Uses Values";
+	public static String uses = "Uses Values";
 	public static String damage = "Damage Values";
 	public static String effect = "Enchantment ID";
 	
@@ -121,20 +121,20 @@ public class Config{
 		witherDmg = config.get(damage, "WitherBane Damage", 5).getInt();
 		admingDmg = config.get(damage, "AdminArk Damage", 999).getInt();
 		
-		blazeUse = config.get(Uses, "BlazeSword Uses", 400).getInt();
-		bloodUse = config.get(Uses, "BloodSword Uses", 1500).getInt();
-		boneUse = config.get(Uses, "BoneSword Uses", 200).getInt();
-		glassUse = config.get(Uses, "GlassSword Uses", 15).getInt();
-		infinityUse = config.get(Uses, "InfinitySword Uses", 850).getInt();
-		lapisUse = config.get(Uses, "LapisSword Uses", 750).getInt();
-		moltenUse = config.get(Uses, "MoltenSword Uses", 300).getInt();
-		aqueousUse = config.get(Uses, "AqueousSword Uses", 300).getInt();
-		masterUse = config.get(Uses, "MasterSword Uses", 1450).getInt();
-		dragonUse = config.get(Uses, "DragonSword Uses", 750).getInt();
-		eyeUse = config.get(Uses, "EyeEndSword Uses", 1750).getInt();
-		aetherUse = config.get(Uses, "AethersGuard Uses", 1000).getInt();
-		witherUse = config.get(Uses, "WitherBane Uses", 1000).getInt();
-		adminUse = config.get(Uses, "AdminArk Uses", 99999999).getInt();
+		blazeUse = config.get(uses, "BlazeSword Uses", 400).getInt();
+		bloodUse = config.get(uses, "BloodSword Uses", 1500).getInt();
+		boneUse = config.get(uses, "BoneSword Uses", 200).getInt();
+		glassUse = config.get(uses, "GlassSword Uses", 15).getInt();
+		infinityUse = config.get(uses, "InfinitySword Uses", 850).getInt();
+		lapisUse = config.get(uses, "LapisSword Uses", 750).getInt();
+		moltenUse = config.get(uses, "MoltenSword Uses", 300).getInt();
+		aqueousUse = config.get(uses, "AqueousSword Uses", 300).getInt();
+		masterUse = config.get(uses, "MasterSword Uses", 1450).getInt();
+		dragonUse = config.get(uses, "DragonSword Uses", 750).getInt();
+		eyeUse = config.get(uses, "EyeEndSword Uses", 1750).getInt();
+		aetherUse = config.get(uses, "AethersGuard Uses", 1000).getInt();
+		witherUse = config.get(uses, "WitherBane Uses", 1000).getInt();
+		adminUse = config.get(uses, "AdminArk Uses", 99999999).getInt();
 		
 		stealthID = config.get(effect, "Stealth Enchantment ID", 100).getInt();
 		ascensionID = config.get(effect, "Ascension Enchantment ID", 101).getInt();

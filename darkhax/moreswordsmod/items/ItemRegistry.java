@@ -3,7 +3,9 @@ package darkhax.moreswordsmod.items;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import darkhax.moreswordsmod.MoreSwords;
 import darkhax.moreswordsmod.core.util.Config;
+import darkhax.moreswordsmod.core.util.Strings;
 
 public class ItemRegistry {
 
@@ -26,34 +28,35 @@ public class ItemRegistry {
 
 	public static void load() {
 		
-		blazeSword = new ItemCoreSword(cfg.blazeSwordID, null, cfg.blazeDmg, 0, cfg.blazeUse, null);
-		bloodSword = new ItemCoreSword(cfg.bloodSwordID, null, cfg.bloodDmg, 0, cfg.bloodUse, null);
-		boneSword = new ItemCoreSword(cfg.boneSwordID, null, cfg.boneDmg, 0, cfg.boneUse, null);
-		dragonSword = new ItemCoreSword(cfg.dragonSwordID, null, cfg.dragonDmg, 0, cfg.dragonUse, null);
-		eyeEndSword = new ItemCoreSword(cfg.eyeEndSwordID, null, cfg.eyeDmg, 0, cfg.eyeUse, null);
-		glassSword = new ItemCoreSword(cfg.glassSwordID, null, cfg.glassDmg, 0, cfg.glassUse, null);
-		infinitySword = new ItemCoreSword(cfg.infinitySwordID, null, cfg.infinityDmg, 0, cfg.infinityUse, null);
-		lapisSword = new ItemCoreSword(cfg.lapisSwordID, null, cfg.lapisDmg, 0, cfg.lapisUse, null);
-		moltenSword = new ItemCoreSword(cfg.moltenSwordID, null, cfg.moltenDmg, 0, cfg.moltenUse, null);
-		masterSword = new ItemCoreSword(cfg.masterSwordID, null, cfg.masterDmg, 0, cfg.masterUse, null);
-		aqueousSword = new ItemCoreSword(cfg.aqueousSwordID, null, cfg.aqueousDmg, 0, cfg.aqueousUse, null);
-		aethersGuard = new ItemCoreSword(cfg.aethersGuardID, null, cfg.aetherDmg, 0, cfg.aetherUse, null);
-		witherBane = new ItemCoreSword(cfg.witherBaneID, null, cfg.witherDmg, 0, cfg.witherUse, null);
-		adminArk = new ItemCoreSword(cfg.adminArkID, null, cfg.admingDmg, 0, cfg.adminUse, null);		
+		blazeSword = new ItemCoreSword(cfg.blazeSwordID, null, cfg.blazeDmg, 0, cfg.blazeUse, null, "blaze").setUnlocalizedName(Strings.blaze);
+		bloodSword = new ItemCoreSword(cfg.bloodSwordID, null, cfg.bloodDmg, 0, cfg.bloodUse, null, "blood").setUnlocalizedName(Strings.blood);
+		boneSword = new ItemCoreSword(cfg.boneSwordID, null, cfg.boneDmg, 0, cfg.boneUse, null, "bone").setUnlocalizedName(Strings.bone);
+		dragonSword = new ItemCoreSword(cfg.dragonSwordID, null, cfg.dragonDmg, 0, cfg.dragonUse, null, "dragon").setUnlocalizedName(Strings.dragon);
+		eyeEndSword = new ItemCoreSword(cfg.eyeEndSwordID, null, cfg.eyeDmg, 0, cfg.eyeUse, null, "eye").setUnlocalizedName(Strings.eye);
+		glassSword = new ItemCoreSword(cfg.glassSwordID, null, cfg.glassDmg, 0, cfg.glassUse, null, "glass").setUnlocalizedName(Strings.glass);
+		infinitySword = new ItemCoreSword(cfg.infinitySwordID, null, cfg.infinityDmg, 0, cfg.infinityUse, null, "infinity").setUnlocalizedName(Strings.infinity);
+		lapisSword = new ItemCoreSword(cfg.lapisSwordID, null, cfg.lapisDmg, 0, cfg.lapisUse, null, "lapis").setUnlocalizedName(Strings.lapis);
+		moltenSword = new ItemCoreSword(cfg.moltenSwordID, null, cfg.moltenDmg, 0, cfg.moltenUse, null, "molten").setUnlocalizedName(Strings.molten);
+		masterSword = new ItemCoreSword(cfg.masterSwordID, null, cfg.masterDmg, 0, cfg.masterUse, null, "master").setUnlocalizedName(Strings.master);
+		aqueousSword = new ItemCoreSword(cfg.aqueousSwordID, null, cfg.aqueousDmg, 0, cfg.aqueousUse, null, "aqueous").setUnlocalizedName(Strings.aqueous);
+		aethersGuard = new ItemCoreSword(cfg.aethersGuardID, null, cfg.aetherDmg, 0, cfg.aetherUse, null, "aether").setUnlocalizedName(Strings.aether);
+		witherBane = new ItemCoreSword(cfg.witherBaneID, null, cfg.witherDmg, 0, cfg.witherUse, null, "wither").setUnlocalizedName(Strings.wither);
+		adminArk = new ItemCoreSword(cfg.adminArkID, null, cfg.admingDmg, 0, cfg.adminUse, null, "admin").setUnlocalizedName(Strings.admin);
+	
 		
-		LanguageRegistry.addName(ItemRegistry.blazeSword, "\u00a76Blaze Sword");
-		LanguageRegistry.addName(ItemRegistry.bloodSword, "\u00a74Blood Sword");
-		LanguageRegistry.addName(ItemRegistry.boneSword, "\u00a7fBone Sword");
-		LanguageRegistry.addName(ItemRegistry.dragonSword, "\u00a75Draconic Sword");
-		LanguageRegistry.addName(ItemRegistry.eyeEndSword, "\u00a7aEyeEnd Sword");
-		LanguageRegistry.addName(ItemRegistry.glassSword, "\u00a78Glass Sword");
-		LanguageRegistry.addName(ItemRegistry.infinitySword, "\u00a77Infinity Sword");
-		LanguageRegistry.addName(ItemRegistry.lapisSword, "\u00a71Lapis Sword");
-		LanguageRegistry.addName(ItemRegistry.moltenSword, "\u00a7cMolten Sword");
-		LanguageRegistry.addName(ItemRegistry.aqueousSword, "\u00a7bAqueous Sword");
-		LanguageRegistry.addName(ItemRegistry.masterSword, "\u00a73Master Sword");
-		LanguageRegistry.addName(ItemRegistry.aethersGuard, "Aether's Guard");
-		LanguageRegistry.addName(ItemRegistry.witherBane, "Wither Bane");
-		LanguageRegistry.addName(ItemRegistry.adminArk, "\u00a74A\u00a76d\u00a7Em\u00a72i\u00a71n \u00a75A\u00a7dr\u00a7ak");
+		MoreSwords.lang.registerItem(blazeSword);
+		MoreSwords.lang.registerItem(bloodSword);
+		MoreSwords.lang.registerItem(boneSword);
+		MoreSwords.lang.registerItem(dragonSword);
+		MoreSwords.lang.registerItem(eyeEndSword);
+		MoreSwords.lang.registerItem(glassSword);
+		MoreSwords.lang.registerItem(infinitySword);
+		MoreSwords.lang.registerItem(lapisSword);
+		MoreSwords.lang.registerItem(moltenSword);
+		MoreSwords.lang.registerItem(masterSword);
+		MoreSwords.lang.registerItem(aqueousSword);
+		MoreSwords.lang.registerItem(aethersGuard);
+		MoreSwords.lang.registerItem(witherBane);
+		MoreSwords.lang.registerItem(adminArk);
 	}
 }
