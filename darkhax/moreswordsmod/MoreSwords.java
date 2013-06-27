@@ -34,7 +34,6 @@ public class MoreSwords{
 		
 		getModMeta(event.getModMetadata());
 		Config.createConfig(event);
-		ItemRegistry.load();
 	}
 	
 	@Mod.Init
