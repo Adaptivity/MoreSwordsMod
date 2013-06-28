@@ -2,6 +2,7 @@ package darkhax.moreswords.items;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import darkhax.moreswords.MoreSwords;
 import darkhax.moreswords.core.util.Strings;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -32,7 +33,7 @@ public class ItemCoreSword extends ItemSword
   public ItemCoreSword(int id, EnumToolMaterial material, int damage, int enchantability, int durability, ItemStack repair, String swordType)
   {
     super(id, EnumToolMaterial.IRON);
-    setCreativeTab(CreativeTabs.tabCombat);
+    setCreativeTab(MoreSwords.tabSwords);
 	setDamage(damage);
     setEnchantability(enchantability);
     setRepairable(repair);

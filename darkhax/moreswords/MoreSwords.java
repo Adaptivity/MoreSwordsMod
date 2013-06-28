@@ -2,6 +2,11 @@ package darkhax.moreswords;
 
 import java.util.Arrays;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.enchantment.EnumEnchantmentType;
+import net.minecraftforge.common.EnumHelper;
+import net.minecraftforge.common.MinecraftForge;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
@@ -10,16 +15,21 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
+import darkhax.moreswords.core.handlers.LivingHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.Language;
 import darkhax.moreswords.core.util.Reference;
+import darkhax.moreswords.enchantment.EnchantmentList;
 import darkhax.moreswords.items.ItemRegistry;
 
 @Mod(modid = Reference.id, name = Reference.name, version = Reference.version)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 
 public class MoreSwords{
+	
+	public static EnumEnchantmentType enumSwords = EnumHelper.addEnchantmentType("sword");
+	public static CreativeTabs tabSwords = new CreativeTabSwords(CreativeTabs.getNextID(), "More Swords Tab");
 	
 	@SidedProxy(serverSide=Reference.common, clientSide=Reference.client)
 	public static CommonProxy proxy;
@@ -40,6 +50,7 @@ public class MoreSwords{
 	public void Init(FMLInitializationEvent event){
 		
 		ItemRegistry.load();
+		EnchantmentList.init();
 	}
 	
 	@Mod.PostInit
