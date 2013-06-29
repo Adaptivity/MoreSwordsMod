@@ -28,7 +28,7 @@ import darkhax.moreswords.items.ItemRegistry;
 
 public class MoreSwords{
 	
-	public static EnumEnchantmentType enumSwords = EnumHelper.addEnchantmentType("sword");
+	public static EnumEnchantmentType enumSwords = EnumHelper.addEnchantmentType("swords");
 	public static CreativeTabs tabSwords = new CreativeTabSwords(CreativeTabs.getNextID(), "More Swords Tab");
 	
 	@SidedProxy(serverSide=Reference.common, clientSide=Reference.client)
