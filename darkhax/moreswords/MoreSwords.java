@@ -8,6 +8,7 @@ import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -18,7 +19,6 @@ import cpw.mods.fml.common.network.NetworkMod;
 import darkhax.moreswords.core.handlers.LivingHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.util.Config;
-import darkhax.moreswords.core.util.Language;
 import darkhax.moreswords.core.util.Reference;
 import darkhax.moreswords.enchantment.EnchantmentList;
 import darkhax.moreswords.items.ItemRegistry;
@@ -37,24 +37,22 @@ public class MoreSwords{
 	@Mod.Instance(Reference.id)
     public static MoreSwords instance;
 	
-	public static Language lang = Language.getInstance();
-	
-	@Mod.PreInit
-	public void PreInit(FMLPreInitializationEvent event){	
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){	
 		
 		getModMeta(event.getModMetadata());
 		Config.createConfig(event);
 	}
 	
-	@Mod.Init
-	public void Init(FMLInitializationEvent event){
+	@EventHandler
+	public void init(FMLInitializationEvent event){
 		
 		ItemRegistry.load();
 		EnchantmentList.init();
 	}
 	
-	@Mod.PostInit
-	public void PostInit(FMLPostInitializationEvent event){
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
 	}
 	
 	private void getModMeta(ModMetadata meta){

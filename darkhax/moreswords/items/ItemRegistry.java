@@ -44,21 +44,6 @@ public class ItemRegistry {
 		aethersGuard = new ItemCoreSword(cfg.aethersGuardID, null, cfg.aetherDmg, 14, cfg.aetherUse, new ItemStack(Item.diamond), "aether").setUnlocalizedName(Strings.aether);
 		witherBane = new ItemCoreSword(cfg.witherBaneID, null, cfg.witherDmg, 14, cfg.witherUse, new ItemStack(Block.slowSand), "wither").setUnlocalizedName(Strings.wither);
 		adminArk = new ItemCoreSword(cfg.adminArkID, null, cfg.admingDmg, 14, cfg.adminUse, new ItemStack(Block.bedrock), "admin").setUnlocalizedName(Strings.admin);
-	
-		
-		MoreSwords.lang.registerItem(blazeSword);
-		MoreSwords.lang.registerItem(bloodSword);
-		MoreSwords.lang.registerItem(boneSword);
-		MoreSwords.lang.registerItem(dragonSword);
-		MoreSwords.lang.registerItem(eyeEndSword);
-		MoreSwords.lang.registerItem(glassSword);
-		MoreSwords.lang.registerItem(infinitySword);
-		MoreSwords.lang.registerItem(lapisSword);
-		MoreSwords.lang.registerItem(moltenSword);
-		MoreSwords.lang.registerItem(masterSword);
-		MoreSwords.lang.registerItem(aqueousSword);
-		MoreSwords.lang.registerItem(aethersGuard);
-		MoreSwords.lang.registerItem(witherBane);
-		MoreSwords.lang.registerItem(adminArk);
+
 	}
 }
