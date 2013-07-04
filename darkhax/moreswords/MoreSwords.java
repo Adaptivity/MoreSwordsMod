@@ -47,6 +47,7 @@ public class MoreSwords{
 		ItemRegistry.load();
 		EnchantmentList.init();
 		LanguageHandler.namesEnglish();
+		LanguageHandler.namesGerman();
 	}
 	
 	@EventHandler
