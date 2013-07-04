@@ -16,6 +16,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
+import darkhax.moreswords.core.handlers.LanguageHandler;
 import darkhax.moreswords.core.handlers.LivingHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.util.Config;
@@ -29,7 +30,7 @@ import darkhax.moreswords.items.ItemRegistry;
 public class MoreSwords{
 	
 	public static EnumEnchantmentType enumSwords = EnumHelper.addEnchantmentType("swords");
-	public static CreativeTabs tabSwords = new CreativeTabSwords(CreativeTabs.getNextID(), "More Swords Tab");
+	public static CreativeTabs tabSwords = new CreativeTabSwords(CreativeTabs.getNextID(), "moreSwords");
 	
 	@SidedProxy(serverSide=Reference.common, clientSide=Reference.client)
 	public static CommonProxy proxy;
@@ -45,6 +46,7 @@ public class MoreSwords{
 		
 		ItemRegistry.load();
 		EnchantmentList.init();
+		LanguageHandler.namesEnglish();
 	}
 	
 	@EventHandler

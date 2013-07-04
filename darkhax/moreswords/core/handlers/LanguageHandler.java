@@ -21,12 +21,23 @@ public class LanguageHandler {
 		LanguageRegistry.instance().addStringLocalization("item.molten.name", "en_US", "Molten Edge");
 		LanguageRegistry.instance().addStringLocalization("item.master.name", "en_US", "Master Sword");
 		LanguageRegistry.instance().addStringLocalization("item.aqueous.name", "en_US", "Aqueous Blade");
-		LanguageRegistry.instance().addStringLocalization("item.aether.name", "en_US", "Aether's Guard");
+		LanguageRegistry.instance().addStringLocalization("item.aether.name", "en_US", "Aethers Guard");
 		LanguageRegistry.instance().addStringLocalization("item.wither.name", "en_US", "Wither Bane");
 		LanguageRegistry.instance().addStringLocalization("item.admin.name", "en_US", "Adminium Ark");
 		
 		//Enchantment Names
 		LanguageRegistry.instance().addStringLocalization("enchantment.ascension", "en_US", "Ascension");
+		LanguageRegistry.instance().addStringLocalization("enchantment.blaze", "en_US", "Blaze");
+		LanguageRegistry.instance().addStringLocalization("enchantment.blessed", "en_US", "Blessed");
+		LanguageRegistry.instance().addStringLocalization("enchantment.decay", "en_US", "Decay");
+		LanguageRegistry.instance().addStringLocalization("enchantment.enderPulse", "en_US", "Ender Pulse");
+		LanguageRegistry.instance().addStringLocalization("enchantment.expedite", "en_US", "Expedite");
+		LanguageRegistry.instance().addStringLocalization("enchantment.feast", "en_US", "Feast");
+		LanguageRegistry.instance().addStringLocalization("enchantment.greed", "en_US", "Greed");
+		LanguageRegistry.instance().addStringLocalization("enchantment.iceAura", "en_US", "Ice Aura");
+		LanguageRegistry.instance().addStringLocalization("enchantment.shatter", "en_US", "Shatter");
+		LanguageRegistry.instance().addStringLocalization("enchantment.stealth", "en_US", "Stealth");
+		LanguageRegistry.instance().addStringLocalization("enchantment.vitality", "en_US", "Vitality");
 		
 	}
 
