@@ -1,11 +1,12 @@
-package darkhax.moreswords.core.util;
+package darkhax.moreswords.core.handlers;
 
+import darkhax.moreswords.core.util.Config;
 import net.minecraft.block.Block;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.EnumHelper;
 
-public class EnumRegistry {
+public class EnumHanlder {
 	
 	public static Config cfg;
 	

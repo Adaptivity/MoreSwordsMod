@@ -8,8 +8,8 @@ import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import darkhax.moreswords.MoreSwords;
+import darkhax.moreswords.core.handlers.EnumHanlder;
 import darkhax.moreswords.core.util.Config;
-import darkhax.moreswords.core.util.EnumRegistry;
 import darkhax.moreswords.core.util.Reference;
 
 public class ItemRegistry {
@@ -35,19 +35,19 @@ public class ItemRegistry {
 	
 	public static void load(){
 		
-		blazeSword = new ItemCoreSword(cfg.blazeSwordID, EnumRegistry.blaze, "blaze").setUnlocalizedName("blaze");
-		bloodSword = new ItemCoreSword(cfg.bloodSwordID, EnumRegistry.blood, "blood").setUnlocalizedName("blood");
-		boneSword = new ItemCoreSword(cfg.boneSwordID, EnumRegistry.bone, "bone").setUnlocalizedName("bone");
-		dragonSword = new ItemCoreSword(cfg.dragonSwordID, EnumRegistry.dragon, "dragon").setUnlocalizedName("dragon");
-		eyeEndSword = new ItemCoreSword(cfg.eyeEndSwordID, EnumRegistry.eye, "eye").setUnlocalizedName("eye");
-		glassSword = new ItemCoreSword(cfg.glassSwordID, EnumRegistry.glass, "glass").setUnlocalizedName("glass");
-		infinitySword = new ItemCoreSword(cfg.infinitySwordID, EnumRegistry.infinity, "infinity").setUnlocalizedName("infinity");
-		lapisSword = new ItemCoreSword(cfg.lapisSwordID, EnumRegistry.lapis, "lapis").setUnlocalizedName("lapis");
-		moltenSword = new ItemCoreSword(cfg.moltenSwordID, EnumRegistry.molten, "molten").setUnlocalizedName("molten");
-		masterSword = new ItemCoreSword(cfg.masterSwordID, EnumRegistry.master, "master").setUnlocalizedName("master");
-		aqueousSword = new ItemCoreSword(cfg.aqueousSwordID, EnumRegistry.aqueous, "aqueous").setUnlocalizedName("aqueous");
-		aethersGuard= new ItemCoreSword(cfg.aethersGuardID, EnumRegistry.aether, "aether").setUnlocalizedName("aether");
-		witherBane = new ItemCoreSword(cfg.witherBaneID, EnumRegistry.wither, "wither").setUnlocalizedName("wither");
-		adminArk = new ItemCoreSword(cfg.adminArkID, EnumRegistry.admin, "admin").setUnlocalizedName("admin");
+		blazeSword = new ItemCoreSword(cfg.blazeSwordID, EnumHanlder.blaze, "blaze").setUnlocalizedName("blaze");
+		bloodSword = new ItemCoreSword(cfg.bloodSwordID, EnumHanlder.blood, "blood").setUnlocalizedName("blood");
+		boneSword = new ItemCoreSword(cfg.boneSwordID, EnumHanlder.bone, "bone").setUnlocalizedName("bone");
+		dragonSword = new ItemCoreSword(cfg.dragonSwordID, EnumHanlder.dragon, "dragon").setUnlocalizedName("dragon");
+		eyeEndSword = new ItemCoreSword(cfg.eyeEndSwordID, EnumHanlder.eye, "eye").setUnlocalizedName("eye");
+		glassSword = new ItemCoreSword(cfg.glassSwordID, EnumHanlder.glass, "glass").setUnlocalizedName("glass");
+		infinitySword = new ItemCoreSword(cfg.infinitySwordID, EnumHanlder.infinity, "infinity").setUnlocalizedName("infinity");
+		lapisSword = new ItemCoreSword(cfg.lapisSwordID, EnumHanlder.lapis, "lapis").setUnlocalizedName("lapis");
+		moltenSword = new ItemCoreSword(cfg.moltenSwordID, EnumHanlder.molten, "molten").setUnlocalizedName("molten");
+		masterSword = new ItemCoreSword(cfg.masterSwordID, EnumHanlder.master, "master").setUnlocalizedName("master");
+		aqueousSword = new ItemCoreSword(cfg.aqueousSwordID, EnumHanlder.aqueous, "aqueous").setUnlocalizedName("aqueous");
+		aethersGuard= new ItemCoreSword(cfg.aethersGuardID, EnumHanlder.aether, "aether").setUnlocalizedName("aether");
+		witherBane = new ItemCoreSword(cfg.witherBaneID, EnumHanlder.wither, "wither").setUnlocalizedName("wither");
+		adminArk = new ItemCoreSword(cfg.adminArkID, EnumHanlder.admin, "admin").setUnlocalizedName("admin");
 	}
 }
