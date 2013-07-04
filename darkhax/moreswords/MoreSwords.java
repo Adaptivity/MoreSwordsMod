@@ -42,17 +42,19 @@ public class MoreSwords{
 		
 		getModMeta(event.getModMetadata());
 		Config.createConfig(event);
-	}
-	
-	@EventHandler
-	public void init(FMLInitializationEvent event){
 		
 		ItemRegistry.load();
 		EnchantmentList.init();
 	}
 	
 	@EventHandler
+	public void init(FMLInitializationEvent event){
+		
+	}
+	
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event){
+		
 	}
 	
 	private void getModMeta(ModMetadata meta){
