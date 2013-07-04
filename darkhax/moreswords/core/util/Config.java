@@ -83,7 +83,7 @@ public class Config{
 	public static int decayID;
 
 	public static void createConfig(FMLPreInitializationEvent event){
-		System.out.println(Reference.name + "Configuration Detected!");
+		Reference.logger.info(Reference.name + "Configuration Detected!");
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
 		
@@ -150,6 +150,6 @@ public class Config{
 		decayID = config.get(effect, "Decay Enchantment ID", 115).getInt();
 		
 		config.save();
-		System.out.println(Reference.name + "Config Loaded!");
+		Reference.logger.info(Reference.name + "Config Loaded!");
 	}
 }
