@@ -4,7 +4,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.enchantment.Enchantment;
 import darkhax.moreswords.MoreSwords;
 import darkhax.moreswords.core.util.Config;
-import darkhax.moreswords.core.util.Strings;
 
 public class EnchantmentList {
 

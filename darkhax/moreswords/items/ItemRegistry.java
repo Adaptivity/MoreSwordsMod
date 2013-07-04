@@ -11,7 +11,6 @@ import darkhax.moreswords.MoreSwords;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.EnumRegistry;
 import darkhax.moreswords.core.util.Reference;
-import darkhax.moreswords.core.util.Strings;
 
 public class ItemRegistry {
 
