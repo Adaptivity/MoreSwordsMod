@@ -12,7 +12,7 @@ public class EnchantmentDecay extends Enchantment {
 
 	public EnchantmentDecay(int par1, int par2) {
 		super(par1, par2, MoreSwords.enumSwords);
-		this.setName("Decay");
+		this.setName("decay");
 	}
 
 	public EnchantmentDecay(int par1, int par2,
@@ -48,10 +48,5 @@ public class EnchantmentDecay extends Enchantment {
 		} else {
 			return false;
 		}
-	}
-
-	public String getTranslatedName(int par1) {
-		String enchantmentName = "Decay";
-		return enchantmentName + " "+ StatCollector.translateToLocal("enchantment.level." + par1);
 	}
 }

@@ -12,7 +12,7 @@ public class EnchantmentIceAura extends Enchantment {
 
 	public EnchantmentIceAura(int par1, int par2) {
 		super(par1, par2, MoreSwords.enumSwords);
-		this.setName("Ice Aura");
+		this.setName("iceAura");
 	}
 
 	public EnchantmentIceAura(int par1, int par2,
@@ -48,10 +48,5 @@ public class EnchantmentIceAura extends Enchantment {
 		} else {
 			return false;
 		}
-	}
-
-	public String getTranslatedName(int par1) {
-		String enchantmentName = "Ice Aura";
-		return enchantmentName + " "+ StatCollector.translateToLocal("enchantment.level." + par1);
 	}
 }

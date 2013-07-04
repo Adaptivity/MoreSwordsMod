@@ -15,7 +15,7 @@ public class EnchantmentAscension extends Enchantment {
 
 	public EnchantmentAscension(int par1, int par2) {
 		super(par1, par2, MoreSwords.enumSwords);
-		this.setName("Ascension");
+		this.setName("ascension");
 	}
 
 	public EnchantmentAscension(int par1, int par2,
@@ -54,10 +54,4 @@ public class EnchantmentAscension extends Enchantment {
     		return false;
     	}
     }
-
-	public String getTranslatedName(int par1) {
-		String enchantmentName = "Ascension";
-		return enchantmentName + " "
-				+ StatCollector.translateToLocal("enchantment.level." + par1);
-	}
 }

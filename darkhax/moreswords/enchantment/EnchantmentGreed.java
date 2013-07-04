@@ -12,7 +12,7 @@ public class EnchantmentGreed extends Enchantment {
 
 	public EnchantmentGreed(int par1, int par2) {
 		super(par1, par2, MoreSwords.enumSwords);
-		this.setName("Greed");
+		this.setName("greed");
 	}
 
 	public EnchantmentGreed(int par1, int par2,
@@ -48,10 +48,5 @@ public class EnchantmentGreed extends Enchantment {
 		} else {
 			return false;
 		}
-	}
-
-	public String getTranslatedName(int par1) {
-		String enchantmentName = "Greed";
-		return enchantmentName + " "+ StatCollector.translateToLocal("enchantment.level." + par1);
 	}
 }

@@ -12,7 +12,7 @@ public class EnchantmentStealth extends Enchantment {
 
 	public EnchantmentStealth(int par1, int par2) {
 		super(par1, par2, MoreSwords.enumSwords);
-		this.setName("Stealth");
+		this.setName("stealth");
 	}
 
 	public EnchantmentStealth(int par1, int par2,
@@ -48,10 +48,5 @@ public class EnchantmentStealth extends Enchantment {
 		} else {
 			return false;
 		}
-	}
-
-	public String getTranslatedName(int par1) {
-		String enchantmentName = "Stealth";
-		return enchantmentName + " "+ StatCollector.translateToLocal("enchantment.level." + par1);
 	}
 }

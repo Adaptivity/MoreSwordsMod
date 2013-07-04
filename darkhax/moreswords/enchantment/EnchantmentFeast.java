@@ -12,7 +12,7 @@ public class EnchantmentFeast extends Enchantment {
 
 	public EnchantmentFeast(int par1, int par2) {
 		super(par1, par2, MoreSwords.enumSwords);
-		this.setName("Feast");
+		this.setName("feast");
 	}
 
 	public EnchantmentFeast(int par1, int par2,
@@ -48,10 +48,5 @@ public class EnchantmentFeast extends Enchantment {
 		} else {
 			return false;
 		}
-	}
-
-	public String getTranslatedName(int par1) {
-		String enchantmentName = "Feast";
-		return enchantmentName + " "+ StatCollector.translateToLocal("enchantment.level." + par1);
 	}
 }
