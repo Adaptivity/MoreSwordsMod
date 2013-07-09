@@ -12,6 +12,8 @@ public class Reference {
     public static final String common = "darkhax.moreswords.core.proxy.CommonProxy";
     public static final String client = "darkhax.moreswords.core.proxy.ClientProxy";
     
+    public static RandomRange random = new RandomRange();
+    
 	public static Logger logger = Logger.getLogger("MoreSwords");
 	
 	static {
