@@ -16,8 +16,9 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
+import darkhax.moreswords.core.handlers.DamageHandler;
+import darkhax.moreswords.core.handlers.JoinWorldEvent;
 import darkhax.moreswords.core.handlers.LanguageHandler;
-import darkhax.moreswords.core.handlers.LivingHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.Reference;
@@ -48,6 +49,8 @@ public class MoreSwords{
 		EnchantmentList.init();
 		LanguageHandler.namesEnglish();
 		LanguageHandler.namesGerman();
+		
+		MinecraftForge.EVENT_BUS.register(new JoinWorldEvent());
 	}
 	
 	@EventHandler
