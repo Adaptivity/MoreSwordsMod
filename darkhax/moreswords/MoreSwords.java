@@ -16,8 +16,8 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
-import darkhax.moreswords.core.handlers.DamageHandler;
-import darkhax.moreswords.core.handlers.JoinWorldEvent;
+import darkhax.moreswords.core.events.DamageHandler;
+import darkhax.moreswords.core.events.JoinWorldEvent;
 import darkhax.moreswords.core.handlers.LanguageHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.util.Config;

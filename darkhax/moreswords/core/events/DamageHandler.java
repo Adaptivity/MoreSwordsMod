@@ -1,4 +1,4 @@
-package darkhax.moreswords.core.handlers;
+package darkhax.moreswords.core.events;
 
 import darkhax.moreswords.enchantment.EnchantmentList;
 import net.minecraft.enchantment.Enchantment;
