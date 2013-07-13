@@ -38,6 +38,7 @@ public class LanguageHandler {
 		LanguageRegistry.instance().addStringLocalization("enchantment.shatter", "en_US", "Shatter");
 		LanguageRegistry.instance().addStringLocalization("enchantment.stealth", "en_US", "Stealth");
 		LanguageRegistry.instance().addStringLocalization("enchantment.vitality", "en_US", "Vitality");		
+		LanguageRegistry.instance().addStringLocalization("enchantment.bloodpool", "en_US", "Blood Pool");	
 	}
 	
 	public static void namesGerman(){	
@@ -74,6 +75,7 @@ public class LanguageHandler {
 		LanguageRegistry.instance().addStringLocalization("enchantment.shatter", "de_DE", "Zerbrechen");
 		LanguageRegistry.instance().addStringLocalization("enchantment.stealth", "de_DE", "Tarnung");
 		LanguageRegistry.instance().addStringLocalization("enchantment.vitality", "de_DE", "Vitalität");	
+		LanguageRegistry.instance().addStringLocalization("enchantment.bloodpool", "de_DE", "Blutreservoir");	
 	}
 
 }
