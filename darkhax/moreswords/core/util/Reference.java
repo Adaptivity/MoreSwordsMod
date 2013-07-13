@@ -8,7 +8,7 @@ public class Reference {
 
     public static final String id = "MoreSwordsMod";
     public static final String name = "More Swords Mod";
-    public static final String version = "2.5.0";
+    public static final String version = "2.5.1";
     public static final String common = "darkhax.moreswords.core.proxy.CommonProxy";
     public static final String client = "darkhax.moreswords.core.proxy.ClientProxy";
     
