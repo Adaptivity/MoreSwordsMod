@@ -22,6 +22,7 @@ import darkhax.moreswords.core.events.InteractionHandler;
 import darkhax.moreswords.core.events.JoinWorldEvent;
 import darkhax.moreswords.core.handlers.LanguageHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
+import darkhax.moreswords.core.proxy.RecipeHandler;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.Reference;
 import darkhax.moreswords.enchantment.EnchantmentList;
@@ -60,6 +61,8 @@ public class MoreSwords{
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event){
+		
+		RecipeHandler.addRecipes();
 		
 	}
 	
