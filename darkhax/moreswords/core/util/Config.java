@@ -12,9 +12,11 @@ public class Config{
 	public static String damage = "Damage Values";
 	public static String effect = "Enchantment ID";
 	
+	
 	// Settings
 	public static boolean expedite;
 	public static boolean debug;
+	public static boolean zombies;
 
 	// Sword Item Values
 	public static int blazeSwordID;
@@ -87,6 +89,8 @@ public class Config{
 		
 		expedite = config.get(settings, "Effect expedite enabled?", true).getBoolean(true);
 		debug = config.get(settings, "Debug mode enabled?", false).getBoolean(false);
+		zombies = config.get(settings, "Should zombies spawn holding swords?", true).getBoolean(true);
+		
 		swordsmanID = config.get(settings, "Swords Selling Villager ID", 66).getInt();
 		
 		blazeSwordID = config.get(values, "BlazeSword Item Value", 5001).getInt();

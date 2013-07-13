@@ -1,5 +1,6 @@
 package darkhax.moreswords.core.events;
 
+import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.Reference;
 import darkhax.moreswords.items.ItemRegistry;
 import net.minecraft.entity.EntityLiving;
@@ -16,8 +17,8 @@ public class JoinWorldEvent
   public static Reference rnd;
 
   @ForgeSubscribe
-  public void EntityJoinWorldEvent(EntityJoinWorldEvent event)
-  {
+  public void EntityJoinWorldEvent(EntityJoinWorldEvent event) {
+	  if (Config.zombies == true){
     rand = Math.random();
     range = Reference.random.nextIntII(1, 12);
     if ((rand <= 0.2D) && 
@@ -81,6 +82,7 @@ public class JoinWorldEvent
       if (range == 12)
         living.setCurrentItemOrArmor(0, new ItemStack(ItemRegistry.blazeSword));
       event.world.updateEntities();
+    }
     }
   }
 }
