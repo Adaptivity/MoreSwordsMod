@@ -26,13 +26,12 @@ public class HurtHandler {
 			ItemStack stack = player.getHeldItem();
 			if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.feast.effectId, stack) > 0) {
 				stack.stackTagCompound.setFloat("blood", event.ammount / 8 + stack.stackTagCompound.getFloat("blood"));
-				FMLClientHandler.instance().getClient().thePlayer.sendChatMessage("Damage is " + stack.stackTagCompound.getFloat("blood"));
 				storedBlood = stack.stackTagCompound.getFloat("blood");
 			}
 		}
 		
 		if (event.entityLiving instanceof EntityPlayer) {
-			if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.ascension.effectId,event.entityLiving.getHeldItem()) > 0) {
+			if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.bloodPool.effectId,event.entityLiving.getHeldItem()) > 0) {
 				if (event.entityLiving.func_110143_aJ() - event.ammount < 1) {
 					ItemStack stack = event.entityLiving.getHeldItem();
 					event.entityLiving.heal(storedBlood);
