@@ -17,6 +17,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 
 import darkhax.moreswords.core.events.DamageHandler;
+import darkhax.moreswords.core.events.HurtHandler;
+import darkhax.moreswords.core.events.InteractionHandler;
 import darkhax.moreswords.core.events.JoinWorldEvent;
 import darkhax.moreswords.core.handlers.LanguageHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
@@ -51,6 +53,9 @@ public class MoreSwords{
 		LanguageHandler.namesGerman();
 		
 		MinecraftForge.EVENT_BUS.register(new JoinWorldEvent());
+		MinecraftForge.EVENT_BUS.register(new HurtHandler());
+		MinecraftForge.EVENT_BUS.register(new DamageHandler());
+		MinecraftForge.EVENT_BUS.register(new InteractionHandler());
 	}
 	
 	@EventHandler

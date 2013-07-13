@@ -74,13 +74,11 @@ public class Config{
 	public static int blazeID;
 	public static int feastID;
 	public static int vitalityID;
-	public static int dragonID;
 	public static int enderPulseID;
-	public static int shatterID;
 	public static int greedID;
 	public static int expediteID;
-	public static int blessedID;
 	public static int decayID;
+	public static int bloodPoolID;
 
 	public static void createConfig(FMLPreInitializationEvent event){
 		Reference.logger.info(Reference.name + "Configuration Detected!");
@@ -143,11 +141,10 @@ public class Config{
 		feastID = config.get(effect, "Feast Enchantment ID", 104).getInt();
 		vitalityID = config.get(effect,"Vitality Enchantment ID", 105).getInt();
 		enderPulseID = config.get(effect, "Ender Pulse Enchantment ID", 108).getInt();
-		shatterID = config.get(effect, "Shatter Enchantment ID", 110).getInt();
 		greedID = config.get(effect, "Greed Enchantments ID", 112).getInt();
 		expediteID = config.get(effect, "Expedite Enchantment ID", 113).getInt();
-		blessedID = config.get(effect, "Blessed Enchantment ID", 114).getInt();
 		decayID = config.get(effect, "Decay Enchantment ID", 115).getInt();
+		bloodPoolID = config.get(effect, "Blood Pool Enchantment ID", 116).getInt();
 		
 		config.save();
 		Reference.logger.info(Reference.name + "Config Loaded!");

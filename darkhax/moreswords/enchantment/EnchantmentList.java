@@ -20,6 +20,7 @@ public class EnchantmentList {
 	public static Enchantment expedite;
 	public static Enchantment blessed;
 	public static Enchantment decay;
+	public static Enchantment bloodPool;
 
 	public static void init() {
 		
@@ -30,11 +31,10 @@ public class EnchantmentList {
 		feast = new EnchantmentFeast(Config.feastID, 78);
 		vitality = new EnchantmentVitality(Config.vitalityID, 78);
 		enderpulse = new EnchantmentEnderpulse(Config.enderPulseID, 78); 
-		shatter = new EnchantmentShatter(Config.shatterID, 78);
 		greed = new EnchantmentGreed(Config.greedID,78); 
 		expedite = new EnchantmentExpedite(Config.expediteID,78);
-		blessed = new EnchantmentBlessed(Config.blessedID,78);
 		decay = new EnchantmentDecay(Config.decayID, 78);
+		bloodPool = new EnchantmentBloodPool(Config.bloodPoolID, 78);
 	}
 
 }
