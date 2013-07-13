@@ -10,17 +10,17 @@ public class LanguageHandler {
 		LanguageRegistry.instance().addStringLocalization("itemGroup.moreSwords", "en_US", "More Swords Mod");
 		
 		//Sword Names
-		LanguageRegistry.instance().addStringLocalization("item.blaze.name", "en_US", "Blaze Sword");
-		LanguageRegistry.instance().addStringLocalization("item.blood.name", "en_US", "Blood Sword");
-		LanguageRegistry.instance().addStringLocalization("item.bone.name", "en_US", "Bone Sword");
-		LanguageRegistry.instance().addStringLocalization("item.dragon.name", "en_US", "Draconic Blade");
-		LanguageRegistry.instance().addStringLocalization("item.eye.name", "en_US", "EyeEnd Sword");
-		LanguageRegistry.instance().addStringLocalization("item.glass.name", "en_US", "Glass Sword");
-		LanguageRegistry.instance().addStringLocalization("item.infinity.name", "en_US", "Infinity Sword");
-		LanguageRegistry.instance().addStringLocalization("item.lapis.name", "en_US", "Lapis Sword");
-		LanguageRegistry.instance().addStringLocalization("item.molten.name", "en_US", "Molten Edge");
-		LanguageRegistry.instance().addStringLocalization("item.master.name", "en_US", "Master Sword");
-		LanguageRegistry.instance().addStringLocalization("item.aqueous.name", "en_US", "Aqueous Blade");
+		LanguageRegistry.instance().addStringLocalization("item.blaze.name", "en_US", "\u00a76Blaze Sword");
+		LanguageRegistry.instance().addStringLocalization("item.blood.name", "en_US", "\u00a74Blood Sword");
+		LanguageRegistry.instance().addStringLocalization("item.bone.name", "en_US", "\u00a7fBone Sword");
+		LanguageRegistry.instance().addStringLocalization("item.dragon.name", "en_US", "\u00a75Draconic Blade");
+		LanguageRegistry.instance().addStringLocalization("item.eye.name", "en_US", "\u00a7aEyeEnd Sword");
+		LanguageRegistry.instance().addStringLocalization("item.glass.name", "en_US", "\u00a78Glass Sword");
+		LanguageRegistry.instance().addStringLocalization("item.infinity.name", "en_US", "\u00a77Infinity Sword");
+		LanguageRegistry.instance().addStringLocalization("item.lapis.name", "en_US", "\u00a71Lapis Sword");
+		LanguageRegistry.instance().addStringLocalization("item.molten.name", "en_US", "\u00a7cMolten Edge");
+		LanguageRegistry.instance().addStringLocalization("item.master.name", "en_US", "\u00a73Master Sword");
+		LanguageRegistry.instance().addStringLocalization("item.aqueous.name", "en_US", "\u00a7bAqueous Blade");
 		LanguageRegistry.instance().addStringLocalization("item.aether.name", "en_US", "Aethers Guard");
 		LanguageRegistry.instance().addStringLocalization("item.wither.name", "en_US", "Wither Bane");
 		LanguageRegistry.instance().addStringLocalization("item.admin.name", "en_US", "Adminium Ark");
@@ -58,7 +58,7 @@ public class LanguageHandler {
 		LanguageRegistry.instance().addStringLocalization("item.molten.name", "de_DE", "\u00a7cVulkanschwert");
 		LanguageRegistry.instance().addStringLocalization("item.master.name", "de_DE", "\u00a7bWasserschwert");
 		LanguageRegistry.instance().addStringLocalization("item.aqueous.name", "de_DE", "\u00a73Meisterschwert");
-		LanguageRegistry.instance().addStringLocalization("item.aether.name", "de_DE", "Himmelswächter");
+		LanguageRegistry.instance().addStringLocalization("item.aether.name", "de_DE", "Himmelswachter");
 		LanguageRegistry.instance().addStringLocalization("item.wither.name", "de_DE", "Fluch des Zerfallens");
 		LanguageRegistry.instance().addStringLocalization("item.admin.name", "de_DE", "\u00a76Adminklinge");
 		
@@ -74,7 +74,7 @@ public class LanguageHandler {
 		LanguageRegistry.instance().addStringLocalization("enchantment.iceAura", "de_DE", "Eis Aura");
 		LanguageRegistry.instance().addStringLocalization("enchantment.shatter", "de_DE", "Zerbrechen");
 		LanguageRegistry.instance().addStringLocalization("enchantment.stealth", "de_DE", "Tarnung");
-		LanguageRegistry.instance().addStringLocalization("enchantment.vitality", "de_DE", "Vitalität");	
+		LanguageRegistry.instance().addStringLocalization("enchantment.vitality", "de_DE", "Vitalitat");	
 		LanguageRegistry.instance().addStringLocalization("enchantment.bloodpool", "de_DE", "Blutreservoir");	
 	}
 
