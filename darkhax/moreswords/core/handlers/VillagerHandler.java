@@ -24,7 +24,7 @@ public class VillagerHandler implements VillagerRegistry.IVillageTradeHandler {
 
   public static void addVillager() {
     VillagerRegistry.instance().registerVillagerId(Config.swordsmanID);
-    
+    VillagerRegistry.instance().registerVillagerSkin(Config.swordsmanID, new ResourceLocation ("assets/moreswords/textures/misc/swordsman.png"));
   }
 
   public void manipulateTradesForVillager(EntityVillager paramEntityVillager, MerchantRecipeList paramMerchantRecipeList, Random paramRandom) {
