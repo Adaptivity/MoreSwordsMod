@@ -7,11 +7,13 @@ import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLInterModComms.IMCEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
@@ -21,6 +23,8 @@ import darkhax.moreswords.core.events.HurtHandler;
 import darkhax.moreswords.core.events.InteractionHandler;
 import darkhax.moreswords.core.events.JoinWorldEvent;
 import darkhax.moreswords.core.handlers.LanguageHandler;
+import darkhax.moreswords.core.handlers.PluginHandler;
+import darkhax.moreswords.core.handlers.VillagerHandler;
 import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.proxy.LootHandler;
 import darkhax.moreswords.core.proxy.RecipeHandler;
@@ -58,6 +62,8 @@ public class MoreSwords{
 		MinecraftForge.EVENT_BUS.register(new HurtHandler());
 		MinecraftForge.EVENT_BUS.register(new DamageHandler());
 		MinecraftForge.EVENT_BUS.register(new InteractionHandler());
+		
+		PluginHandler.initEplus();
 	}
 	
 	@EventHandler
@@ -65,6 +71,7 @@ public class MoreSwords{
 		
 		RecipeHandler.addRecipes();
 		LootHandler.addLoot();	
+		VillagerHandler.init();
 	}
 	
 	@EventHandler
