@@ -1,6 +1,7 @@
 package darkhax.moreswords;
 
 import java.util.Arrays;
+import java.util.List;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnumEnchantmentType;
@@ -23,8 +24,9 @@ import darkhax.moreswords.core.events.HurtHandler;
 import darkhax.moreswords.core.events.InteractionHandler;
 import darkhax.moreswords.core.events.JoinWorldEvent;
 import darkhax.moreswords.core.handlers.LanguageHandler;
-import darkhax.moreswords.core.handlers.PluginHandler;
 import darkhax.moreswords.core.handlers.VillagerHandler;
+import darkhax.moreswords.core.plugins.PluginEplus;
+import darkhax.moreswords.core.proxy.ClientProxy;
 import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.proxy.LootHandler;
 import darkhax.moreswords.core.proxy.RecipeHandler;
@@ -63,7 +65,8 @@ public class MoreSwords{
 		MinecraftForge.EVENT_BUS.register(new DamageHandler());
 		MinecraftForge.EVENT_BUS.register(new InteractionHandler());
 		
-		PluginHandler.initEplus();
+		VillagerHandler.init();	
+		ClientProxy.renderVillager();
 	}
 	
 	@EventHandler
@@ -71,12 +74,16 @@ public class MoreSwords{
 		
 		RecipeHandler.addRecipes();
 		LootHandler.addLoot();	
-		VillagerHandler.init();
 	}
 	
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event){
 		
+	}
+	
+	@EventHandler
+	public void callback(IMCEvent event){
+		PluginEplus.PreInit();
 	}
 	
 	private void getModMeta(ModMetadata meta){
