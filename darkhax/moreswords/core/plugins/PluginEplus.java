@@ -9,7 +9,7 @@ import eplus.api.EplusApi;
 public class PluginEplus
 {
 
-    public static void PreInit()
+    public static void loadPlugin()
     {
         final Map<String, String> toolTips = new HashMap<String, String>();
         
