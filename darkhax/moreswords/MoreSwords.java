@@ -3,8 +3,10 @@ package darkhax.moreswords;
 import java.util.Arrays;
 import java.util.List;
 
+import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnumEnchantmentType;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -18,7 +20,11 @@ import cpw.mods.fml.common.event.FMLInterModComms.IMCEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
+import darkhax.moreswords.blocks.BlockAwakenTable;
+import darkhax.moreswords.blocks.Blocks;
 import darkhax.moreswords.core.events.DamageHandler;
 import darkhax.moreswords.core.events.HurtHandler;
 import darkhax.moreswords.core.events.InteractionHandler;
@@ -34,6 +40,7 @@ import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.Reference;
 import darkhax.moreswords.enchantment.EnchantmentList;
 import darkhax.moreswords.items.ItemRegistry;
+import darkhax.moreswords.tileentity.TileEntityAwakenTable;
 
 @Mod(modid = Reference.id, name = Reference.name, version = Reference.version)
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
@@ -47,7 +54,9 @@ public class MoreSwords{
 	public static CommonProxy proxy;
 	
 	@Mod.Instance(Reference.id)
-    public static MoreSwords instance;
+    public static MoreSwords instance = new MoreSwords();
+	
+	public static Block awakenmentTable;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){	
@@ -56,6 +65,7 @@ public class MoreSwords{
 		Config.createConfig(event);
 		
 		ItemRegistry.load();
+		Blocks.load();
 		EnchantmentList.init();
 		LanguageHandler.namesEnglish();
 		LanguageHandler.namesGerman();
@@ -67,6 +77,9 @@ public class MoreSwords{
 		
 		VillagerHandler.init();	
 		ClientProxy.renderVillager();
+		PluginEplus.loadPlugin();	
+
+		NetworkRegistry.instance().registerGuiHandler(this.instance,new darkhax.moreswords.core.handlers.GuiHandler());	
 	}
 	
 	@EventHandler
@@ -79,11 +92,6 @@ public class MoreSwords{
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event){
 		
-	}
-	
-	@EventHandler
-	public void callback(IMCEvent event){
-		PluginEplus.PreInit();
 	}
 	
 	private void getModMeta(ModMetadata meta){
