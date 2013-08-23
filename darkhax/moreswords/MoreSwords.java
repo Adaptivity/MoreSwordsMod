@@ -25,17 +25,17 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 import darkhax.moreswords.blocks.BlockAwakenTable;
 import darkhax.moreswords.blocks.Blocks;
-import darkhax.moreswords.core.events.DamageHandler;
-import darkhax.moreswords.core.events.HurtHandler;
-import darkhax.moreswords.core.events.InteractionHandler;
-import darkhax.moreswords.core.events.JoinWorldEvent;
+import darkhax.moreswords.core.handlers.DamageHandler;
+import darkhax.moreswords.core.handlers.HurtHandler;
+import darkhax.moreswords.core.handlers.InteractionHandler;
+import darkhax.moreswords.core.handlers.JoinWorldEvent;
 import darkhax.moreswords.core.handlers.LanguageHandler;
+import darkhax.moreswords.core.handlers.LootHandler;
+import darkhax.moreswords.core.handlers.RecipeHandler;
 import darkhax.moreswords.core.handlers.VillagerHandler;
 import darkhax.moreswords.core.plugins.PluginEplus;
 import darkhax.moreswords.core.proxy.ClientProxy;
 import darkhax.moreswords.core.proxy.CommonProxy;
-import darkhax.moreswords.core.proxy.LootHandler;
-import darkhax.moreswords.core.proxy.RecipeHandler;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.Reference;
 import darkhax.moreswords.enchantment.EnchantmentList;
@@ -55,8 +55,6 @@ public class MoreSwords{
 	
 	@Mod.Instance(Reference.id)
     public static MoreSwords instance;
-	
-	public static Block awakenmentTable;
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event){	

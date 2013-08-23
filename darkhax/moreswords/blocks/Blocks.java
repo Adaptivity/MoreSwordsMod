@@ -15,5 +15,4 @@ public class Blocks {
 		GameRegistry.registerBlock(awakenmentTable);
 		GameRegistry.registerTileEntity(TileEntityAwakenTable.class, "awakenTable");
 	}
-
 }
