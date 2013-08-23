@@ -6,8 +6,7 @@ import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;
 
 public class LootHandler {
-  public static void addLoot()
-  {
+  public static void addLoot() {
     addDungeon();
     addBonus();
     addBlacksmith();

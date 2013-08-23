@@ -21,7 +21,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 public class InteractionHandler
 {
   @ForgeSubscribe
-  public void EntityJoinWorldEvent(PlayerInteractEvent event)
+  public void RightClickEvent(PlayerInteractEvent event)
   {
     if (event.useItem != null)
     {
