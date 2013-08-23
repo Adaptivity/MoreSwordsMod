@@ -54,7 +54,7 @@ public class MoreSwords{
 	public static CommonProxy proxy;
 	
 	@Mod.Instance(Reference.id)
-    public static MoreSwords instance = new MoreSwords();
+    public static MoreSwords instance;
 	
 	public static Block awakenmentTable;
 	

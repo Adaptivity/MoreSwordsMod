@@ -7,10 +7,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.PacketDispatcher;
-import eplus.lib.ConfigurationSettings;
-import eplus.lib.GuiIds;
-import eplus.lib.Strings;
-import eplus.network.packets.GuiPacket;
 
 public class GuiAwakenTable extends GuiEnchantment {
     private final EntityPlayer player;

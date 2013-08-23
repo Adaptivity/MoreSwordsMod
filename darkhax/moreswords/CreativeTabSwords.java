@@ -10,23 +10,20 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.item.Item;
 
-final class CreativeTabSwords extends CreativeTabs
-{
-    CreativeTabSwords(int par1, String par2Str)
-    {
-        super(par1, par2Str);
+public class CreativeTabSwords extends CreativeTabs {
+	
+    CreativeTabSwords(int id, String name) {
+        super(id, name);
     }
 
     @SideOnly(Side.CLIENT)
-    public int getTabIconItemIndex()
-    {
+    public int getTabIconItemIndex() {
         return ItemRegistry.adminArk.itemID;
     }
 
     @SideOnly(Side.CLIENT)
-    public void displayAllReleventItems(List par1List)
-    {
-        super.displayAllReleventItems(par1List);
-        this.addEnchantmentBooksToList(par1List, new EnumEnchantmentType[] {MoreSwords.enumSwords});
+    public void displayAllReleventItems(List items) {
+        super.displayAllReleventItems(items);
+        this.addEnchantmentBooksToList(items, new EnumEnchantmentType[] {MoreSwords.enumSwords});
     }
 }
