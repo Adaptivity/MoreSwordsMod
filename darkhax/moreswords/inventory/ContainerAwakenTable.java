@@ -48,10 +48,6 @@ public class ContainerAwakenTable extends Container {
             addSlotToContainer(new Slot(par1InventoryPlayer, l, 17 + l * 18, 149));
         }
 
-        if (tileAwakenTable.itemInTable != null) {
-            par1InventoryPlayer.player.dropPlayerItem(tileAwakenTable.itemInTable);
-            tileAwakenTable.itemInTable = null;
-        }
     }
 
     @Override

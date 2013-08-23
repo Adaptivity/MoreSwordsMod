@@ -9,8 +9,7 @@ import net.minecraft.item.ItemPotion;
 import net.minecraft.item.ItemStack;
 
 
-public class SlotAwaken extends Slot
-{
+public class SlotAwaken extends Slot {
     final ContainerAwakenTable container;
 
     public SlotAwaken(ContainerAwakenTable containerEnchantTable, IInventory tableInventory, int i, int i1, int i2) {
