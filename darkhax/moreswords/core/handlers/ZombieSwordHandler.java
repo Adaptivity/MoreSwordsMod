@@ -10,7 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
-public class JoinWorldEvent
+public class ZombieSwordHandler
 {
   public static double rand;
   public static int range;

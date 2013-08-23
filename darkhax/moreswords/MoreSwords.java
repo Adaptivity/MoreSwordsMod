@@ -28,7 +28,7 @@ import darkhax.moreswords.blocks.Blocks;
 import darkhax.moreswords.core.handlers.DamageHandler;
 import darkhax.moreswords.core.handlers.HurtHandler;
 import darkhax.moreswords.core.handlers.InteractionHandler;
-import darkhax.moreswords.core.handlers.JoinWorldEvent;
+import darkhax.moreswords.core.handlers.ZombieSwordHandler;
 import darkhax.moreswords.core.handlers.LanguageHandler;
 import darkhax.moreswords.core.handlers.LootHandler;
 import darkhax.moreswords.core.handlers.RecipeHandler;
@@ -68,7 +68,7 @@ public class MoreSwords{
 		LanguageHandler.namesEnglish();
 		LanguageHandler.namesGerman();
 		
-		MinecraftForge.EVENT_BUS.register(new JoinWorldEvent());
+		MinecraftForge.EVENT_BUS.register(new ZombieSwordHandler());
 		MinecraftForge.EVENT_BUS.register(new HurtHandler());
 		MinecraftForge.EVENT_BUS.register(new DamageHandler());
 		MinecraftForge.EVENT_BUS.register(new InteractionHandler());
