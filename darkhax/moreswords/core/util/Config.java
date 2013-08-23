@@ -20,6 +20,7 @@ public class Config{
 	public static boolean zombies;
 
 	// Sword Item Values
+	public static int swordBookID;
 	public static int blazeSwordID;
 	public static int bloodSwordID;
 	public static int boneSwordID;
@@ -96,6 +97,8 @@ public class Config{
 		zombies = config.get(settings, "Should zombies spawn holding swords?", true).getBoolean(true);
 		
 		swordsmanID = config.get(settings, "Swords Selling Villager ID", 66).getInt();
+		
+		swordBookID = config.get(values, "Sword Book Item Value", 6324).getInt();
 		
 		blazeSwordID = config.get(values, "BlazeSword Item Value", 5001).getInt();
 		bloodSwordID = config.get(values, "BloodSword Item Value", 5002).getInt();

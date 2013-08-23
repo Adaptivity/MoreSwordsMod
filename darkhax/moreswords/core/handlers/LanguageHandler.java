@@ -24,6 +24,7 @@ public class LanguageHandler {
 		LanguageRegistry.instance().addStringLocalization("item.aether.name", "en_US", "Aethers Guard");
 		LanguageRegistry.instance().addStringLocalization("item.wither.name", "en_US", "Wither Bane");
 		LanguageRegistry.instance().addStringLocalization("item.admin.name", "en_US", "Adminium Ark");
+		LanguageRegistry.instance().addStringLocalization("item.swordBook.name", "en_US", "Swordinomicon \u00a74[WIP]");
 		
 		//Enchantment Names
 		LanguageRegistry.instance().addStringLocalization("enchantment.ascension", "en_US", "Ascension");

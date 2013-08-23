@@ -14,6 +14,8 @@ import darkhax.moreswords.core.util.Reference;
 
 public class Items {
 
+	public static Item swordBook;
+	
 	public static Item blazeSword;
 	public static Item bloodSword;
 	public static Item boneSword;
@@ -30,8 +32,6 @@ public class Items {
 	public static Item adminArk;
 	
 	public static Config cfg;
-	public static String modId = Reference.id;
-	public static String name = Reference.name;
 	
 	public static void load(){
 		
@@ -49,5 +49,7 @@ public class Items {
 		aethersGuard= new ItemCoreSword(cfg.aethersGuardID, EnumHanlder.aether, "aether").setUnlocalizedName("aether");
 		witherBane = new ItemCoreSword(cfg.witherBaneID, EnumHanlder.wither, "wither").setUnlocalizedName("wither");
 		adminArk = new ItemCoreSword(cfg.adminArkID, EnumHanlder.admin, "admin").setUnlocalizedName("admin");
+		
+		swordBook = new ItemSwordinomicon(Config.swordBookID).setUnlocalizedName("swordBook").func_111206_d("moreswords:Swordinomicon");
 	}
 }
