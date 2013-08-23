@@ -16,7 +16,7 @@ public class Blocks {
 		awakenmentTable = new BlockAwakenTable(Config.AwakenTableID).setCreativeTab(MoreSwords.tabSwords);
 		GameRegistry.registerBlock(awakenmentTable);
 		GameRegistry.registerTileEntity(TileEntityAwakenTable.class, "awakenTable");
-		LanguageRegistry.addName(awakenmentTable, "Awakening Table");
+		LanguageRegistry.addName(awakenmentTable, "Awakening Table [WIP]");
 		
 	}
 }
