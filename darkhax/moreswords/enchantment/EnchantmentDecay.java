@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.StatCollector;
 import darkhax.moreswords.MoreSwords;
-import darkhax.moreswords.items.ItemRegistry;
+import darkhax.moreswords.items.Items;
 
 public class EnchantmentDecay extends Enchantment {
 
@@ -43,7 +43,7 @@ public class EnchantmentDecay extends Enchantment {
     }
 
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		if (stack.getItem() == ItemRegistry.witherBane) {
+		if (stack.getItem() == Items.witherBane) {
 			return true;
 		} else {
 			return false;

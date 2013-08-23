@@ -4,7 +4,7 @@ import cpw.mods.fml.common.registry.VillagerRegistry;
 import cpw.mods.fml.common.registry.VillagerRegistry.IVillageTradeHandler;
 import darkhax.moreswords.core.proxy.ClientProxy;
 import darkhax.moreswords.core.util.Config;
-import darkhax.moreswords.items.ItemRegistry;
+import darkhax.moreswords.items.Items;
 import java.util.Random;
 
 import net.minecraft.enchantment.Enchantment;
@@ -30,10 +30,10 @@ public class VillagerHandler implements VillagerRegistry.IVillageTradeHandler {
   }
 
   public void manipulateTradesForVillager(EntityVillager entity, MerchantRecipeList list, Random rand) {
-    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.feather, 15), new ItemStack(ItemRegistry.aethersGuard, 1, 0)));
-    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.bucketWater, 1), new ItemStack(ItemRegistry.aqueousSword, 1, 0)));
-    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.blazeRod, 2), new ItemStack(ItemRegistry.blazeSword, 1, 0)));
-    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.bone, 15), new ItemStack(ItemRegistry.boneSword, 1, 0)));
-    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.redstone, 15), new ItemStack(ItemRegistry.dragonSword, 1, 0)));
+    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.feather, 15), new ItemStack(Items.aethersGuard, 1, 0)));
+    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.bucketWater, 1), new ItemStack(Items.aqueousSword, 1, 0)));
+    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.blazeRod, 2), new ItemStack(Items.blazeSword, 1, 0)));
+    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.bone, 15), new ItemStack(Items.boneSword, 1, 0)));
+    list.add(new MerchantRecipe(new ItemStack(Item.emerald, 7), new ItemStack(Item.redstone, 15), new ItemStack(Items.dragonSword, 1, 0)));
   }
 }

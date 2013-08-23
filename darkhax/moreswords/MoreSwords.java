@@ -39,7 +39,7 @@ import darkhax.moreswords.core.proxy.CommonProxy;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.Reference;
 import darkhax.moreswords.enchantment.EnchantmentList;
-import darkhax.moreswords.items.ItemRegistry;
+import darkhax.moreswords.items.Items;
 import darkhax.moreswords.tileentity.TileEntityAwakenTable;
 
 @Mod(modid = Reference.id, name = Reference.name, version = Reference.version)
@@ -62,7 +62,7 @@ public class MoreSwords{
 		getModMeta(event.getModMetadata());
 		Config.createConfig(event);
 		
-		ItemRegistry.load();
+		Items.load();
 		Blocks.load();
 		EnchantmentList.init();
 		LanguageHandler.namesEnglish();

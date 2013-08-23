@@ -9,7 +9,7 @@ import net.minecraft.item.ItemSword;
 import net.minecraft.util.StatCollector;
 import darkhax.moreswords.MoreSwords;
 import darkhax.moreswords.items.ItemCoreSword;
-import darkhax.moreswords.items.ItemRegistry;
+import darkhax.moreswords.items.Items;
 
 public class EnchantmentBloodPool extends Enchantment {
 
@@ -36,7 +36,7 @@ public class EnchantmentBloodPool extends Enchantment {
 	}
 
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		if (stack.getItem() == ItemRegistry.bloodSword) {
+		if (stack.getItem() == Items.bloodSword) {
 			return true;
 		}
 		else{

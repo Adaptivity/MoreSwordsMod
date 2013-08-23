@@ -4,7 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import java.util.List;
 
-import darkhax.moreswords.items.ItemRegistry;
+import darkhax.moreswords.items.Items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnumEnchantmentType;
@@ -18,7 +18,7 @@ public class CreativeTabSwords extends CreativeTabs {
 
     @SideOnly(Side.CLIENT)
     public int getTabIconItemIndex() {
-        return ItemRegistry.adminArk.itemID;
+        return Items.adminArk.itemID;
     }
 
     @SideOnly(Side.CLIENT)
