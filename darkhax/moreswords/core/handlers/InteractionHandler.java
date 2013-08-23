@@ -18,13 +18,11 @@ import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
-public class InteractionHandler
-{
+public class InteractionHandler {
+	
   @ForgeSubscribe
-  public void RightClickEvent(PlayerInteractEvent event)
-  {
-    if (event.useItem != null)
-    {
+  public void RightClickEvent(PlayerInteractEvent event) {
+    if (event.useItem != null) {
       if ((event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_AIR) | event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK))) {
         if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.stealth.effectId, event.entityPlayer.getHeldItem()) == 1) {
           event.entityPlayer.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 1200, 0));
@@ -53,8 +51,7 @@ public class InteractionHandler
 
         if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, event.entityPlayer.getHeldItem()) == 1) {
           MovingObjectPosition position = RayTraceHelper.rayTrace(event.entityPlayer.worldObj, event.entityPlayer, 15);
-          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE))
-          {
+          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE)) {
             int x = position.blockX;
             int y = position.blockY;
             int z = position.blockZ;
@@ -90,14 +87,12 @@ public class InteractionHandler
         }
         if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, event.entityPlayer.getHeldItem()) == 2) {
           MovingObjectPosition position = RayTraceHelper.rayTrace(event.entityPlayer.worldObj, event.entityPlayer, 30);
-          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE))
-          {
+          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE)) {
             int x = position.blockX;
             int y = position.blockY;
             int z = position.blockZ;
 
-            switch (position.sideHit)
-            {
+            switch (position.sideHit) {
             case 0:
               y--;
               break;
@@ -127,14 +122,12 @@ public class InteractionHandler
         }
         if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, event.entityPlayer.getHeldItem()) == 3) {
           MovingObjectPosition position = RayTraceHelper.rayTrace(event.entityPlayer.worldObj, event.entityPlayer, 45);
-          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE))
-          {
+          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE)) {
             int x = position.blockX;
             int y = position.blockY;
             int z = position.blockZ;
 
-            switch (position.sideHit)
-            {
+            switch (position.sideHit) {
             case 0:
               y--;
               break;
@@ -163,6 +156,7 @@ public class InteractionHandler
           }
         }
       }
+      
       if (Config.expedite == true) {
         if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 3) {
           event.entityPlayer.worldObj.setWorldTime(event.entityPlayer.worldObj.getWorldTime() + 50);
