@@ -11,6 +11,7 @@ public class Config{
 	public static String uses = "Uses Values";
 	public static String damage = "Damage Values";
 	public static String effect = "Enchantment ID";
+	public static String wip = "Work In Progress";
 	
 	
 	// Settings
@@ -81,6 +82,9 @@ public class Config{
 	public static int expediteID;
 	public static int decayID;
 	public static int bloodPoolID;
+	
+	//wip
+	public static int AwakenTableID;
 
 	public static void createConfig(FMLPreInitializationEvent event){
 		Reference.logger.info(Reference.name + "Configuration Detected!");
@@ -149,6 +153,8 @@ public class Config{
 		expediteID = config.get(effect, "Expedite Enchantment ID", 113).getInt();
 		decayID = config.get(effect, "Decay Enchantment ID", 115).getInt();
 		bloodPoolID = config.get(effect, "Blood Pool Enchantment ID", 116).getInt();
+		
+		AwakenTableID = config.get(wip, "AwakenTableID", 3452).getInt();
 		
 		config.save();
 		Reference.logger.info(Reference.name + "Config Loaded!");
