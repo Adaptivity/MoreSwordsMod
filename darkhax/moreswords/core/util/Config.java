@@ -20,7 +20,6 @@ public class Config{
 	public static boolean zombies;
 
 	// Sword Item Values
-	public static int swordBookID;
 	public static int blazeSwordID;
 	public static int bloodSwordID;
 	public static int boneSwordID;
@@ -83,9 +82,12 @@ public class Config{
 	public static int expediteID;
 	public static int decayID;
 	public static int bloodPoolID;
+	public static int blessedID;
+	public static int shatterID;
 	
 	//wip
 	public static int AwakenTableID;
+	public static int swordBookID;
 
 	public static void createConfig(FMLPreInitializationEvent event){
 		Reference.logger.info(Reference.name + "Configuration Detected!");
@@ -115,19 +117,19 @@ public class Config{
 		witherBaneID = config.get(values, "WitherBane Item Value", 5013).getInt();
 		adminArkID = config.get(values, "AdminArk Item Value", 5014).getInt();
 		
-		blazeDmg = config.get(damage, "BlazeSword Damage", 4).getInt();
+		blazeDmg = config.get(damage, "BlazeSword Damage", 5).getInt();
 		bloodDmg = config.get(damage, "BloodSword Damage", 6).getInt();
 		boneDmg = config.get(damage, "BoneSword Damage", 3).getInt();
 		glassDmg = config.get(damage, "GlassSword Damage", 5).getInt();
 		infinityDmg = config.get(damage, "InfinitySword Damage", 7).getInt();
-		lapisDmg = config.get(damage, "LapisSword Damage", 3).getInt();
-		moltenDmg = config.get(damage, "MoltenSword Damage", 4).getInt();
-		aqueousDmg = config.get(damage, "AqueousSword Damage", 4).getInt();
+		lapisDmg = config.get(damage, "LapisSword Damage", 4).getInt();
+		moltenDmg = config.get(damage, "MoltenSword Damage", 5).getInt();
+		aqueousDmg = config.get(damage, "AqueousSword Damage", 5).getInt();
 		masterDmg = config.get(damage, "MasterSword Damage", 6).getInt();
 		dragonDmg = config.get(damage, "DragonSword Damage", 7).getInt();
 		eyeDmg = config.get(damage, "EyeEndSword Damage", 8).getInt();
 		aetherDmg = config.get(damage, "AethersGuard Damage", 7).getInt();
-		witherDmg = config.get(damage, "WitherBane Damage", 5).getInt();
+		witherDmg = config.get(damage, "WitherBane Damage", 6).getInt();
 		admingDmg = config.get(damage, "AdminArk Damage", 999).getInt();
 		
 		blazeUse = config.get(uses, "BlazeSword Uses", 400).getInt();
@@ -137,12 +139,12 @@ public class Config{
 		infinityUse = config.get(uses, "InfinitySword Uses", 850).getInt();
 		lapisUse = config.get(uses, "LapisSword Uses", 750).getInt();
 		moltenUse = config.get(uses, "MoltenSword Uses", 300).getInt();
-		aqueousUse = config.get(uses, "AqueousSword Uses", 300).getInt();
+		aqueousUse = config.get(uses, "AqueousSword Uses", 450).getInt();
 		masterUse = config.get(uses, "MasterSword Uses", 1450).getInt();
 		dragonUse = config.get(uses, "DragonSword Uses", 750).getInt();
 		eyeUse = config.get(uses, "EyeEndSword Uses", 1750).getInt();
-		aetherUse = config.get(uses, "AethersGuard Uses", 1000).getInt();
-		witherUse = config.get(uses, "WitherBane Uses", 1000).getInt();
+		aetherUse = config.get(uses, "AethersGuard Uses", 1777).getInt();
+		witherUse = config.get(uses, "WitherBane Uses", 1666).getInt();
 		adminUse = config.get(uses, "AdminArk Uses", 99999999).getInt();
 		
 		stealthID = config.get(effect, "Stealth Enchantment ID", 100).getInt();
@@ -151,9 +153,11 @@ public class Config{
 		blazeID = config.get(effect, "Blaze Enchantment ID", 103).getInt();
 		feastID = config.get(effect, "Feast Enchantment ID", 104).getInt();
 		vitalityID = config.get(effect,"Vitality Enchantment ID", 105).getInt();
+		shatterID = config.get(effect, "Shatter Enchantment ID", 106).getInt();
 		enderPulseID = config.get(effect, "Ender Pulse Enchantment ID", 108).getInt();
 		greedID = config.get(effect, "Greed Enchantments ID", 112).getInt();
 		expediteID = config.get(effect, "Expedite Enchantment ID", 113).getInt();
+		blessedID = config.get(effect, "Blessed Enchantment Id", 113).getInt();
 		decayID = config.get(effect, "Decay Enchantment ID", 115).getInt();
 		bloodPoolID = config.get(effect, "Blood Pool Enchantment ID", 116).getInt();
 		

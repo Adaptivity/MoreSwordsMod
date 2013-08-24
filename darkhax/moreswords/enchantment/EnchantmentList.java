@@ -35,6 +35,7 @@ public class EnchantmentList {
 		expedite = new EnchantmentExpedite(Config.expediteID,78);
 		decay = new EnchantmentDecay(Config.decayID, 78);
 		bloodPool = new EnchantmentBloodPool(Config.bloodPoolID, 78);
+		blessed = new EnchantmentBlessed(Config.blessedID, 78);
 	}
 
 }

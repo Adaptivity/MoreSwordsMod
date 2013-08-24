@@ -47,6 +47,14 @@ public class DamageHandler {
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.feast.effectId, player.getHeldItem()) >= 1) {
 				    EffectManager.feast(living, player.getHeldItem());		
 				}
+				
+				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.blessed.effectId, player.getHeldItem()) >= 1) {
+				    EffectManager.blessed(living, player.getHeldItem());		
+				}
+				
+				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.shatter.effectId, player.getHeldItem()) >= 1) {
+				    EffectManager.shatter(living, player.getHeldItem());		
+				}
 			}
 		}
 	}
