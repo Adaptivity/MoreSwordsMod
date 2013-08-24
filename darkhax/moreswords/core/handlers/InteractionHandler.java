@@ -158,10 +158,10 @@ public class InteractionHandler {
       }
       
       if (Config.expedite == true) {
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 3) {
+        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 1) {
           event.entityPlayer.worldObj.setWorldTime(event.entityPlayer.worldObj.getWorldTime() + 50);
         }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 3) {
+        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 2) {
           event.entityPlayer.worldObj.setWorldTime(event.entityPlayer.worldObj.getWorldTime() + 100);
         }
         if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 3)
