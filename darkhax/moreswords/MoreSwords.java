@@ -25,10 +25,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 import darkhax.moreswords.blocks.BlockAwakenTable;
 import darkhax.moreswords.blocks.Blocks;
-import darkhax.moreswords.core.handlers.DamageHandler;
-import darkhax.moreswords.core.handlers.HurtHandler;
-import darkhax.moreswords.core.handlers.InteractionHandler;
-import darkhax.moreswords.core.handlers.ZombieSwordHandler;
+import darkhax.moreswords.core.events.DamageHandler;
+import darkhax.moreswords.core.events.HurtHandler;
+import darkhax.moreswords.core.events.InteractionHandler;
+import darkhax.moreswords.core.events.ZombieSwordHandler;
 import darkhax.moreswords.core.handlers.LanguageHandler;
 import darkhax.moreswords.core.handlers.LootHandler;
 import darkhax.moreswords.core.handlers.RecipeHandler;

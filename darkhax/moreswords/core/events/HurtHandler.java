@@ -1,4 +1,4 @@
-package darkhax.moreswords.core.handlers;
+package darkhax.moreswords.core.events;
 
 import java.util.List;
 

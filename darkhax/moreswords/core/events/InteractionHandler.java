@@ -1,4 +1,4 @@
-package darkhax.moreswords.core.handlers;
+package darkhax.moreswords.core.events;
 
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.RayTraceHelper;
