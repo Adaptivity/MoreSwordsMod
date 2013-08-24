@@ -135,4 +135,14 @@ public class EffectManager {
 		int time = EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, stack) * 50;
 		world.setWorldTime(world.getWorldTime() + time);
 	}
+	
+	public static void blessed(EntityLiving living, ItemStack stack) {
+		float damage = EnchantmentHelper.getEnchantmentLevel(EnchantmentList.blessed.effectId, stack) * 2;
+		living.attackEntityFrom(DamageSource.magic, damage);
+	}
+	
+	public static void shatter(EntityLiving living, ItemStack stack) {
+		float damage = EnchantmentHelper.getEnchantmentLevel(EnchantmentList.shatter.effectId, stack) * 1;
+		living.attackEntityFrom(DamageSource.magic, damage);
+	}
 }
