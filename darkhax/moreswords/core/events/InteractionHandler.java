@@ -1,5 +1,6 @@
 package darkhax.moreswords.core.events;
 
+import darkhax.moreswords.core.handlers.EffectManager;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.RayTraceHelper;
 import darkhax.moreswords.enchantment.EnchantmentList;
@@ -20,153 +21,34 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
 public class InteractionHandler {
 	
-  @ForgeSubscribe
-  public void RightClickEvent(PlayerInteractEvent event) {
-    if (event.useItem != null) {
-      if ((event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_AIR) | event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK))) {
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.stealth.effectId, event.entityPlayer.getHeldItem()) == 1) {
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 1200, 0));
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.stealth.effectId, event.entityPlayer.getHeldItem()) == 2) {
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 6000, 0));
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.stealth.effectId, event.entityPlayer.getHeldItem()) == 3) {
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 36000, 0));
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.vitality.effectId, event.entityPlayer.getHeldItem()) == 1) {
-          event.entityPlayer.getHeldItem().damageItem(250, event.entityPlayer);
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.heal.getId(), 20, 0));
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.vitality.effectId, event.entityPlayer.getHeldItem()) == 2) {
-          event.entityPlayer.getHeldItem().damageItem(250, event.entityPlayer);
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.heal.getId(), 20, 0));
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 1200, 0));
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.vitality.effectId, event.entityPlayer.getHeldItem()) == 3) {
-          event.entityPlayer.getHeldItem().damageItem(250, event.entityPlayer);
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.heal.getId(), 40, 0));
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 1200, 0));
-          event.entityPlayer.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 2400, 0));
-        }
-
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, event.entityPlayer.getHeldItem()) == 1) {
-          MovingObjectPosition position = RayTraceHelper.rayTrace(event.entityPlayer.worldObj, event.entityPlayer, 15);
-          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE)) {
-            int x = position.blockX;
-            int y = position.blockY;
-            int z = position.blockZ;
-
-            switch (position.sideHit)
-            {
-            case 0:
-              y--;
-              break;
-            case 1:
-              y++;
-              break;
-            case 2:
-              z--;
-              break;
-            case 3:
-              z++;
-              break;
-            case 4:
-              x--;
-              break;
-            case 5:
-              x++;
-              break;
-            default:
-              y++;
-            }
-
-            event.entityPlayer.getHeldItem().damageItem(50, event.entityLiving);
-            event.entityPlayer.setPositionAndUpdate(x, y, z);
-            event.entityPlayer.attackEntityFrom(DamageSource.fall, 2);
-          }
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, event.entityPlayer.getHeldItem()) == 2) {
-          MovingObjectPosition position = RayTraceHelper.rayTrace(event.entityPlayer.worldObj, event.entityPlayer, 30);
-          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE)) {
-            int x = position.blockX;
-            int y = position.blockY;
-            int z = position.blockZ;
-
-            switch (position.sideHit) {
-            case 0:
-              y--;
-              break;
-            case 1:
-              y++;
-              break;
-            case 2:
-              z--;
-              break;
-            case 3:
-              z++;
-              break;
-            case 4:
-              x--;
-              break;
-            case 5:
-              x++;
-              break;
-            default:
-              y++;
-            }
-
-            event.entityPlayer.getHeldItem().damageItem(25, event.entityLiving);
-            event.entityPlayer.setPositionAndUpdate(x, y, z);
-            event.entityPlayer.attackEntityFrom(DamageSource.fall, 1);
-          }
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, event.entityPlayer.getHeldItem()) == 3) {
-          MovingObjectPosition position = RayTraceHelper.rayTrace(event.entityPlayer.worldObj, event.entityPlayer, 45);
-          if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE)) {
-            int x = position.blockX;
-            int y = position.blockY;
-            int z = position.blockZ;
-
-            switch (position.sideHit) {
-            case 0:
-              y--;
-              break;
-            case 1:
-              y++;
-              break;
-            case 2:
-              z--;
-              break;
-            case 3:
-              z++;
-              break;
-            case 4:
-              x--;
-              break;
-            case 5:
-              x++;
-              break;
-            default:
-              y++;
-            }
-
-            event.entityPlayer.getHeldItem().damageItem(10, event.entityLiving);
-            event.entityPlayer.setPositionAndUpdate(x, y, z);
-            event.entityPlayer.attackEntityFrom(DamageSource.fall, 0);
-          }
-        }
-      }
-      
-      if (Config.expedite == true) {
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 1) {
-          event.entityPlayer.worldObj.setWorldTime(event.entityPlayer.worldObj.getWorldTime() + 50);
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 2) {
-          event.entityPlayer.worldObj.setWorldTime(event.entityPlayer.worldObj.getWorldTime() + 100);
-        }
-        if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) == 3)
-          event.entityPlayer.worldObj.setWorldTime(event.entityPlayer.worldObj.getWorldTime() + 150);
-      }
-    }
-  }
+  
+	@ForgeSubscribe 
+	public void RightClickEvent(PlayerInteractEvent event) {   
+		if (event.useItem != null) {     
+			if ((event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_AIR))) {
+				
+				EntityPlayer player = (EntityPlayer) event.entity;
+				ItemStack stack = player.getHeldItem();
+				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.stealth.effectId, event.entityPlayer.getHeldItem()) >= 1){
+					
+					EffectManager.stealth(player, stack);
+				}
+				
+				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.vitality.effectId, event.entityPlayer.getHeldItem()) >= 1){
+					
+					EffectManager.vitality(player, stack);
+				}
+				
+				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, event.entityPlayer.getHeldItem()) >= 1){
+					
+					EffectManager.enderPulse(player, stack);
+				}
+				
+				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.expedite.effectId, event.entityPlayer.getHeldItem()) >= 1){
+					
+					EffectManager.expedite(player.worldObj, stack);
+				}
+			}   
+		}
+	}
 }
