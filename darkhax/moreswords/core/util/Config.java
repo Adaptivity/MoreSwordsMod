@@ -157,7 +157,7 @@ public class Config{
 		enderPulseID = config.get(effect, "Ender Pulse Enchantment ID", 108).getInt();
 		greedID = config.get(effect, "Greed Enchantments ID", 112).getInt();
 		expediteID = config.get(effect, "Expedite Enchantment ID", 113).getInt();
-		blessedID = config.get(effect, "Blessed Enchantment Id", 113).getInt();
+		blessedID = config.get(effect, "Blessed Enchantment Id", 114).getInt();
 		decayID = config.get(effect, "Decay Enchantment ID", 115).getInt();
 		bloodPoolID = config.get(effect, "Blood Pool Enchantment ID", 116).getInt();
 		
