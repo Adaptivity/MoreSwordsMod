@@ -50,6 +50,6 @@ public class Items {
 		witherBane = new ItemCoreSword(cfg.witherBaneID, EnumHanlder.wither, "wither").setUnlocalizedName("wither");
 		adminArk = new ItemCoreSword(cfg.adminArkID, EnumHanlder.admin, "admin").setUnlocalizedName("admin");
 		
-		swordBook = new ItemSwordinomicon(Config.swordBookID).setUnlocalizedName("swordBook");
+		swordBook = new ItemSwordinomicon(Config.swordBookID).setUnlocalizedName("swordBook").setTextureName("moreswords:Swordinomicon");
 	}
 }
