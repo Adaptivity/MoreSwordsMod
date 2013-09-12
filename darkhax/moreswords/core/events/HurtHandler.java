@@ -31,7 +31,7 @@ public class HurtHandler {
 		
 		if (event.entityLiving instanceof EntityPlayer) {
 			if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.bloodPool.effectId,event.entityLiving.getHeldItem()) >= 1) {
-				if (event.entityLiving.func_110143_aJ() - event.ammount < 1) {
+				if (event.entityLiving.getHealth() - event.ammount < 1) {
 					EntityPlayer player = (EntityPlayer) event.entityLiving;
 					EffectManager.getBloodPool(player, event.entityLiving.getHeldItem());
 				}
