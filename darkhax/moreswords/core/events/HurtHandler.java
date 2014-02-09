@@ -3,6 +3,7 @@ package darkhax.moreswords.core.events;
 import java.util.List;
 
 import cpw.mods.fml.client.FMLClientHandler;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import darkhax.moreswords.core.handlers.EffectManager;
 import darkhax.moreswords.enchantment.EnchantmentList;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -13,12 +14,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagFloat;
 import net.minecraft.util.DamageSource;
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 public class HurtHandler {
 
-	@ForgeSubscribe
+	@SubscribeEvent
 	public void getHurtEvent(LivingHurtEvent event) {
 		if (event.source.getEntity() instanceof EntityPlayer) {
 			EntityPlayer player = (EntityPlayer) event.source.getEntity();

@@ -1,0 +1,31 @@
+itemGroup.moreSwords=MoreSwordsMod
+
+item.blaze.name=§6Blaze Sword
+item.blood.name=§4Blood Sword
+item.bone.name=§fBone Sword
+item.dragon.name=§5Draconic Blade
+item.eye.name=§aEye End Sword
+item.glass.name=§8Glass Sword
+item.infinity.name=§7Infinity Sword
+item.lapis.name=§1Lapis Sword
+item.molten.name=§cMolten Edge
+item.master.name=§3Master Sword
+item.aqueous.name=§bAqueous Blade
+item.aether.name=Aethers Guard
+item.wither.name=Wither Bane
+item.admin.name=Adminium Ark
+item.swordBook.name=Swordinomicon§4[WIP]
+
+enchantment.ascension=Ascension
+enchantment.blaze=Blaze
+enchantment.blessed=Blessed
+enchantment.decay=Decay
+enchantment.enderPulse=Ender Pulse
+enchantment.expedite=Expedite
+enchantment.feast=Feast
+enchantment.greed=Greed
+enchantment.iceAura=Ice Aura
+enchantment.shatter=Shatter
+enchantment.stealth=Stealth
+enchantment.vitality=Vitality
+enchantment.bloodpool=Blood Pool

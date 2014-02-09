@@ -8,8 +8,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumMovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
+import net.minecraft.util.MovingObjectPosition.MovingObjectType;
 import net.minecraft.world.World;
 import darkhax.moreswords.core.util.RayTraceHelper;
 import darkhax.moreswords.core.util.Reference;
@@ -24,7 +24,7 @@ public class EffectManager {
 	
 	public static void greed(EntityLiving player, ItemStack stack) {
 		int xp = EnchantmentHelper.getEnchantmentLevel(EnchantmentList.greed.effectId, stack) *15;
-		player.experienceValue = xp;
+		//player. = xp;
 	}
 	
 	public static void glaciate(EntityLiving player, ItemStack stack) {
@@ -97,7 +97,7 @@ public class EffectManager {
 		
 		int distance = EnchantmentHelper.getEnchantmentLevel(EnchantmentList.enderpulse.effectId, stack) * 18;
         MovingObjectPosition position = RayTraceHelper.rayTrace(player.worldObj, player, distance);            
-        if ((position != null) && (position.typeOfHit == EnumMovingObjectType.TILE)) {          
+        if ((position != null) && (position.typeOfHit == MovingObjectType.BLOCK)) {          
         	int x = position.blockX;             
         	int y = position.blockY;             
         	int z = position.blockZ;

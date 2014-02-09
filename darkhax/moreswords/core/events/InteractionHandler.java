@@ -1,5 +1,6 @@
 package darkhax.moreswords.core.events;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import darkhax.moreswords.core.handlers.EffectManager;
 import darkhax.moreswords.core.util.Config;
 import darkhax.moreswords.core.util.RayTraceHelper;
@@ -12,17 +13,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumMovingObjectType;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
-import net.minecraftforge.event.ForgeSubscribe;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
 public class InteractionHandler {
 	
   
-	@ForgeSubscribe 
+	@SubscribeEvent 
 	public void RightClickEvent(PlayerInteractEvent event) {   
 		if (event.useItem != null) {     
 			if ((event.action.equals(PlayerInteractEvent.Action.RIGHT_CLICK_AIR))) {

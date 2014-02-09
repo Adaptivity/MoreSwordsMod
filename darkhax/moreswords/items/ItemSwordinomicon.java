@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 
 public class ItemSwordinomicon extends Item {
     public ItemSwordinomicon(int id) {
-        super(id);
+        super();
         this.setCreativeTab(MoreSwords.tabSwords);
     }
 

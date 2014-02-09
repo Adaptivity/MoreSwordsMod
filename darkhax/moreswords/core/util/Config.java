@@ -1,6 +1,6 @@
 package darkhax.moreswords.core.util;
 
-import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 public class Config{
@@ -18,6 +18,8 @@ public class Config{
 	public static boolean expedite;
 	public static boolean debug;
 	public static boolean zombies;
+	public static boolean bedrock;
+	public static double zombie;
 
 	// Sword Item Values
 	public static int blazeSwordID;
@@ -90,13 +92,14 @@ public class Config{
 	public static int swordBookID;
 
 	public static void createConfig(FMLPreInitializationEvent event){
-		Reference.logger.info(Reference.name + "Configuration Detected!");
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
 		
 		expedite = config.get(settings, "Effect expedite enabled?", true).getBoolean(true);
 		debug = config.get(settings, "Debug mode enabled?", false).getBoolean(false);
 		zombies = config.get(settings, "Should zombies spawn holding swords?", true).getBoolean(true);
+		bedrock = config.get(settings, "Can the Adminium Ark be crafted with bedrock?", true).getBoolean(true);
+		zombie = config.get(settings,  "Zombie rate", 0.02).getDouble(0.02);
 		
 		swordsmanID = config.get(settings, "Swords Selling Villager ID", 66).getInt();
 		
@@ -164,6 +167,5 @@ public class Config{
 		AwakenTableID = config.get(wip, "AwakenTableID", 3452).getInt();
 		
 		config.save();
-		Reference.logger.info(Reference.name + "Config Loaded!");
 	}
 }

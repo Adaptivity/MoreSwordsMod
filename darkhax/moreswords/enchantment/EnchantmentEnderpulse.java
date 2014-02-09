@@ -6,7 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.util.StatCollector;
 import darkhax.moreswords.MoreSwords;
-import darkhax.moreswords.items.Items;
+import darkhax.moreswords.items.ItemManager;
 
 public class EnchantmentEnderpulse extends Enchantment {
 
@@ -43,7 +43,7 @@ public class EnchantmentEnderpulse extends Enchantment {
     }
 
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		if (stack.getItem() == Items.eyeEndSword) {
+		if (stack.getItem() == ItemManager.eyeEndSword) {
 			return true;
 		} else {
 			return false;

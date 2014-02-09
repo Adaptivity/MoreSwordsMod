@@ -1,7 +1,7 @@
 package darkhax.moreswords.enchantment;
 
 import darkhax.moreswords.MoreSwords;
-import darkhax.moreswords.items.Items;
+import darkhax.moreswords.items.ItemManager;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.item.ItemStack;
@@ -43,7 +43,7 @@ public class EnchantmentExpedite extends Enchantment {
     }
 
 	public boolean canApplyAtEnchantingTable(ItemStack stack) {
-		if (stack.getItem() == Items.masterSword) {
+		if (stack.getItem() == ItemManager.masterSword) {
 			return true;
 		} else {
 			return false;
