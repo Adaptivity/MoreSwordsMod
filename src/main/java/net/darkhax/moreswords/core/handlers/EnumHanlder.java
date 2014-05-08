@@ -1,8 +1,6 @@
 package net.darkhax.moreswords.core.handlers;
 
 import net.darkhax.moreswords.core.util.Config;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 

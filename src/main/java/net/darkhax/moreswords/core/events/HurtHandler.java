@@ -1,20 +1,12 @@
 package net.darkhax.moreswords.core.events;
 
-import java.util.List;
-
-import cpw.mods.fml.client.FMLClientHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.darkhax.moreswords.core.handlers.EffectManager;
 import net.darkhax.moreswords.enchantment.EnchantmentList;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagFloat;
-import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class HurtHandler {
 

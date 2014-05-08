@@ -1,7 +1,5 @@
 package net.darkhax.moreswords.enchantment;
 
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import net.darkhax.moreswords.MoreSwords;
 import net.darkhax.moreswords.core.util.Config;
 import net.minecraft.enchantment.Enchantment;
 

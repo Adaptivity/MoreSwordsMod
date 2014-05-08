@@ -1,20 +1,12 @@
 package net.darkhax.moreswords.core.events;
 
-import com.google.common.eventbus.Subscribe;
-
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.darkhax.moreswords.core.handlers.EffectManager;
 import net.darkhax.moreswords.enchantment.EnchantmentList;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class DamageHandler {
 

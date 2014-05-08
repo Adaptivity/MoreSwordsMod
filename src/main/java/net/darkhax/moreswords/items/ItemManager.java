@@ -1,15 +1,9 @@
 package net.darkhax.moreswords.items;
 
-import net.darkhax.moreswords.MoreSwords;
 import net.darkhax.moreswords.core.handlers.EnumHanlder;
 import net.darkhax.moreswords.core.util.Config;
-import net.darkhax.moreswords.core.util.Reference;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class ItemManager {
 

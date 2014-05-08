@@ -4,7 +4,6 @@ import net.darkhax.moreswords.core.events.ToolTipHandler;
 import net.darkhax.moreswords.core.util.Config;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.common.registry.VillagerRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

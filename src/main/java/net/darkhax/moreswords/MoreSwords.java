@@ -10,7 +10,6 @@ import net.darkhax.moreswords.core.handlers.LanguageHandler;
 import net.darkhax.moreswords.core.handlers.LootHandler;
 import net.darkhax.moreswords.core.handlers.RecipeHandler;
 import net.darkhax.moreswords.core.handlers.VillagerHandler;
-import net.darkhax.moreswords.core.proxy.ClientProxy;
 import net.darkhax.moreswords.core.proxy.CommonProxy;
 import net.darkhax.moreswords.core.util.Config;
 import net.darkhax.moreswords.core.util.Reference;
@@ -25,7 +24,6 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.ModMetadata;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 

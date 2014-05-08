@@ -6,7 +6,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.util.StatCollector;
 
 public class EnchantmentDecay extends Enchantment {
 

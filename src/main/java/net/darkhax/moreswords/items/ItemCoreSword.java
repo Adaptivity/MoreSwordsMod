@@ -2,7 +2,6 @@ package net.darkhax.moreswords.items;
 
 import net.darkhax.moreswords.MoreSwords;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 

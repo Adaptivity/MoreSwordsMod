@@ -1,14 +1,13 @@
 package net.darkhax.moreswords.core.events;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.darkhax.moreswords.core.util.Config;
 import net.darkhax.moreswords.core.util.Reference;
 import net.darkhax.moreswords.items.ItemManager;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.monster.EntitySkeleton;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ZombieSwordHandler {
 	public static double rand;

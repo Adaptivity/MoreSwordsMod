@@ -1,18 +1,10 @@
 package net.darkhax.moreswords.core.events;
 
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.darkhax.moreswords.enchantment.EnchantmentList;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.settings.GameSettings;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentArrowFire;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ToolTipHandler {
 

@@ -1,21 +1,15 @@
 package net.darkhax.moreswords.core.handlers;
 
-import cpw.mods.fml.common.registry.VillagerRegistry;
-import cpw.mods.fml.common.registry.VillagerRegistry.IVillageTradeHandler;
-
 import java.util.Random;
 
-import net.darkhax.moreswords.core.proxy.ClientProxy;
 import net.darkhax.moreswords.core.util.Config;
 import net.darkhax.moreswords.items.ItemManager;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.village.MerchantRecipe;
 import net.minecraft.village.MerchantRecipeList;
+import cpw.mods.fml.common.registry.VillagerRegistry;
 
 public class VillagerHandler implements VillagerRegistry.IVillageTradeHandler {
 

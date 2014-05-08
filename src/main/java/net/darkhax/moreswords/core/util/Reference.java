@@ -1,8 +1,5 @@
 package net.darkhax.moreswords.core.util;
 
-import java.util.logging.Logger;
-
-import cpw.mods.fml.common.FMLLog;
 
 public class Reference {
 

@@ -1,15 +1,11 @@
 package net.darkhax.moreswords.enchantment;
 
 import net.darkhax.moreswords.MoreSwords;
-import net.darkhax.moreswords.items.ItemCoreSword;
 import net.darkhax.moreswords.items.ItemManager;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnumEnchantmentType;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemBook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.util.StatCollector;
 
 public class EnchantmentBloodPool extends Enchantment {
 
