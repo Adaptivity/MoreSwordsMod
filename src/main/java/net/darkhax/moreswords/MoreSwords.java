@@ -10,7 +10,6 @@ import net.darkhax.moreswords.core.handlers.LanguageHandler;
 import net.darkhax.moreswords.core.handlers.LootHandler;
 import net.darkhax.moreswords.core.handlers.RecipeHandler;
 import net.darkhax.moreswords.core.handlers.VillagerHandler;
-import net.darkhax.moreswords.core.plugins.PluginEplus;
 import net.darkhax.moreswords.core.proxy.ClientProxy;
 import net.darkhax.moreswords.core.proxy.CommonProxy;
 import net.darkhax.moreswords.core.util.Config;
@@ -62,7 +61,6 @@ public class MoreSwords{
 		VillagerHandler.init();	
 		proxy.renderVillager();
 		proxy.registerEvents();
-		PluginEplus.loadPlugin();	
 	}
 	
 	@EventHandler

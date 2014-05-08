@@ -9,7 +9,9 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 public class RecipeHandler {
+	
 	public static void addRecipes() {
+		
 		GameRegistry.addRecipe(new ItemStack(ItemManager.blazeSword), new Object[] { " x ", "yxy", " z ", Character.valueOf('x'), Items.iron_ingot, Character.valueOf('z'), Items.blaze_rod, Character.valueOf('y'), Items.gold_ingot });
 
 	    GameRegistry.addRecipe(new ItemStack(ItemManager.bloodSword), new Object[] { " xy", " xy", " z ", Character.valueOf('x'), Blocks.obsidian, Character.valueOf('z'), Items.stick, Character.valueOf('y'), Items.redstone });
