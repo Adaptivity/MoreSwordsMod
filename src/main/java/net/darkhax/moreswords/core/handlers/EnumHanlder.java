@@ -5,9 +5,9 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class EnumHanlder {
-	
+
 	public static Config cfg;
-	
+
 	public static final ToolMaterial blaze = EnumHelper.addToolMaterial("blaze", 2, cfg.blazeUse, 6.0F, cfg.blazeDmg - 4, 14);
 	public static final ToolMaterial blood = EnumHelper.addToolMaterial("blood", 2, cfg.bloodUse, 6.0F, cfg.bloodDmg - 4, 14);
 	public static final ToolMaterial bone = EnumHelper.addToolMaterial("bone", 2, cfg.boneUse, 6.0F, cfg.boneDmg - 4, 14);

@@ -14,7 +14,7 @@ import cpw.mods.fml.common.registry.VillagerRegistry;
 public class VillagerHandler implements VillagerRegistry.IVillageTradeHandler {
 
 	public static void init() {
-		
+
 		addVillager();
 		VillagerRegistry localVillagerRegistry = VillagerRegistry.instance();
 		VillagerHandler SwordTradeHandler = new VillagerHandler();
@@ -22,12 +22,12 @@ public class VillagerHandler implements VillagerRegistry.IVillageTradeHandler {
 	}
 
 	public static void addVillager() {
-		
+
 		VillagerRegistry.instance().registerVillagerId(Config.swordsmanID);
 	}
 
 	public void manipulateTradesForVillager(EntityVillager entity, MerchantRecipeList list, Random rand) {
-		
+
 		list.add(new MerchantRecipe(new ItemStack(Items.emerald, 7), new ItemStack(Items.feather, 15), new ItemStack(ItemManager.aethersGuard, 1, 0)));
 		list.add(new MerchantRecipe(new ItemStack(Items.emerald, 7), new ItemStack(Items.water_bucket, 1), new ItemStack(ItemManager.aqueousSword, 1, 0)));
 		list.add(new MerchantRecipe(new ItemStack(Items.emerald, 7), new ItemStack(Items.blaze_rod, 2), new ItemStack(ItemManager.blazeSword, 1, 0)));

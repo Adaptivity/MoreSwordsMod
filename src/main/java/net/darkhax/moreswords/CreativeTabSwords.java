@@ -10,23 +10,22 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class CreativeTabSwords extends CreativeTabs {
-	
-    CreativeTabSwords(int id, String name) {
-    	
-        super(id, name);
-    }
 
-    @SuppressWarnings("rawtypes")
+	CreativeTabSwords(int id, String name) {
+
+		super(id, name);
+	}
+
 	@SideOnly(Side.CLIENT)
-    public void displayAllReleventItems(List items) {
-    	
-        super.displayAllReleventItems(items);
-        this.addEnchantmentBooksToList(items, new EnumEnchantmentType[] {MoreSwords.enumSwords});
-    }
+	public void displayAllReleventItems(List items) {
+
+		super.displayAllReleventItems(items);
+		this.addEnchantmentBooksToList(items, new EnumEnchantmentType[] { MoreSwords.enumSwords });
+	}
 
 	@Override
 	public Item getTabIconItem() {
-		
+
 		return ItemManager.adminArk;
 	}
 }

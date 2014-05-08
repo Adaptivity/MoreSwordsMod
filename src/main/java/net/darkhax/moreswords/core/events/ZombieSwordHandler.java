@@ -21,59 +21,59 @@ public class ZombieSwordHandler {
 			range = Reference.random.nextIntII(1, 12);
 			if ((rand <= Config.zombie) && ((event.entity instanceof EntityLiving)) && (event.entity instanceof EntityZombie)) {
 				EntityLiving living = (EntityLiving) event.entity;
-				
+
 				if (range == 1) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.bloodSword));				
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.bloodSword));
 				}
 
 				if (range == 2) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.boneSword));				
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.boneSword));
 				}
 
 				if (range == 3) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.dragonSword));					
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.dragonSword));
 				}
 
 				if (range == 4) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.eyeEndSword));				
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.eyeEndSword));
 				}
 
 				if (range == 5) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.glassSword));				
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.glassSword));
 				}
 
 				if (range == 6) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.infinitySword));				
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.infinitySword));
 				}
 
 				if (range == 7) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.lapisSword));					
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.lapisSword));
 				}
 
 				if (range == 8) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.moltenSword));					
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.moltenSword));
 				}
 
 				if (range == 9) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.aqueousSword));					
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.aqueousSword));
 				}
 
 				if (range == 10) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.aethersGuard));					
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.aethersGuard));
 				}
 
 				if (range == 11) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.witherBane));					
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.witherBane));
 				}
 
 				if (range == 12) {
-					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.blazeSword));	
+					living.setCurrentItemOrArmor(0, new ItemStack(ItemManager.blazeSword));
 				}
-				
+
 				event.world.updateEntity(living);
-				
-			    }
-			
-		   }
-       }
+
+			}
+
+		}
+	}
 }

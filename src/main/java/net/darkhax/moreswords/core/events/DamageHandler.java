@@ -17,33 +17,33 @@ public class DamageHandler {
 			EntityLiving living = (EntityLiving) event.target;
 
 			if ((event.target instanceof EntityLiving)) {
-				
+
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.ascension.effectId, player.getHeldItem()) >= 1) {
-					    EffectManager.ascension(living, player.getHeldItem());
+					EffectManager.ascension(living, player.getHeldItem());
 				}
-				
+
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.greed.effectId, player.getHeldItem()) >= 1) {
-				    EffectManager.greed(living, player.getHeldItem());		
+					EffectManager.greed(living, player.getHeldItem());
 				}
-				
+
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.iceaura.effectId, player.getHeldItem()) >= 1) {
-				    EffectManager.glaciate(living, player.getHeldItem());		
+					EffectManager.glaciate(living, player.getHeldItem());
 				}
-				
+
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.decay.effectId, player.getHeldItem()) >= 1) {
-				    EffectManager.decay(living, player.getHeldItem());		
+					EffectManager.decay(living, player.getHeldItem());
 				}
-				
+
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.blaze.effectId, player.getHeldItem()) >= 1) {
-				    EffectManager.blaze(living, player.getHeldItem());		
+					EffectManager.blaze(living, player.getHeldItem());
 				}
-				
+
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.feast.effectId, player.getHeldItem()) >= 1) {
-				    EffectManager.feast(living, player.getHeldItem());		
+					EffectManager.feast(living, player.getHeldItem());
 				}
-				
+
 				if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.blessed.effectId, player.getHeldItem()) >= 1) {
-				    EffectManager.blessed(living, player.getHeldItem());		
+					EffectManager.blessed(living, player.getHeldItem());
 				}
 			}
 		}

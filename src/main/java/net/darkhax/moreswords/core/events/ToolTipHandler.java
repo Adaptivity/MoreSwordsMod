@@ -12,13 +12,13 @@ public class ToolTipHandler {
 	public void onDisplayTooltip(ItemTooltipEvent event) {
 
 		if (EnchantmentHelper.getEnchantmentLevel(EnchantmentList.bloodPool.effectId, event.itemStack) > 0) {
-			
+
 			if (!event.itemStack.hasTagCompound()) {
-				
+
 				event.itemStack.setTagCompound(new NBTTagCompound());
 				event.itemStack.stackTagCompound.setFloat("blood", 0f);
 			}
-			
+
 			event.toolTip.add("Current Blood: " + event.itemStack.stackTagCompound.getFloat("blood"));
 		}
 	}
